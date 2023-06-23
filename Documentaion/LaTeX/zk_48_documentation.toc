@@ -1,0 +1,21 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Hardware}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Concept}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Components}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Ignition Voltage Generator}{4}{subsubsection.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.1.1}Circuit}{4}{paragraph.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Controller}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.1}Circuit}{5}{paragraph.2.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.2.2}Housing}{5}{paragraph.2.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Trigger}{5}{subsubsection.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.3.1}Circuit}{5}{paragraph.2.2.3.1}%
+\contentsline {paragraph}{\numberline {2.2.3.2}Housing}{5}{paragraph.2.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.2.4}Modules}{5}{subsubsection.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.4.1}Circuit}{5}{paragraph.2.2.4.1}%
+\contentsline {paragraph}{\numberline {2.2.4.2}Housing}{5}{paragraph.2.2.4.2}%
+\contentsline {section}{\numberline {3}Firmware}{5}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}USB Connection}{5}{subsubsection.3.0.1}%
+\contentsline {paragraph}{\numberline {3.0.1.1}Program Mode}{5}{paragraph.3.0.1.1}%
+\contentsline {paragraph}{\numberline {3.0.1.2}Commands}{5}{paragraph.3.0.1.2}%
+\contentsline {section}{\numberline {4}Software}{5}{section.4}%
