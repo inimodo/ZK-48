@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "usbtotll")(type "KiCad")(uri "${KIPRJMOD}/usbtotll.kicad_sym")(options "")(descr ""))
+)
