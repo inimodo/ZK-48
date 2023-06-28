@@ -1,23 +1,32 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {section}{\numberline {2}Hardware}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Concept}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Components}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Ignition Voltage Generator}{4}{subsubsection.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.1.1}The Circuit}{4}{paragraph.2.2.1.1}%
-\contentsline {paragraph}{\numberline {2.2.1.2}How does the circuit work?}{5}{paragraph.2.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.2.2}Controller}{6}{subsubsection.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.1}Circuit}{6}{paragraph.2.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.2.2}Housing}{6}{paragraph.2.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Trigger}{6}{subsubsection.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.3.1}Circuit}{6}{paragraph.2.2.3.1}%
-\contentsline {paragraph}{\numberline {2.2.3.2}Housing}{6}{paragraph.2.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.2.4}Module}{6}{subsubsection.2.2.4}%
-\contentsline {paragraph}{\numberline {2.2.4.1}Circuit}{6}{paragraph.2.2.4.1}%
-\contentsline {paragraph}{\numberline {2.2.4.2}Housing}{6}{paragraph.2.2.4.2}%
-\contentsline {section}{\numberline {3}Firmware}{6}{section.3}%
-\contentsline {subsubsection}{\numberline {3.0.1}USB Connection}{6}{subsubsection.3.0.1}%
-\contentsline {paragraph}{\numberline {3.0.1.1}Program Mode}{6}{paragraph.3.0.1.1}%
-\contentsline {paragraph}{\numberline {3.0.1.2}Commands}{6}{paragraph.3.0.1.2}%
-\contentsline {section}{\numberline {4}Software}{6}{section.4}%
-\contentsline {section}{\numberline {5}Recognitions}{7}{section.5}%
+\contentsline {subsection}{\numberline {1.1}Legal Disclaimer}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Concept}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Hardware}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Ignition Voltage Generator}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Circuit}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}How does the circuit work?}{5}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Testing}{6}{subsubsection.2.1.3}%
+\contentsline {paragraph}{\numberline {2.1.3.1}Results}{6}{paragraph.2.1.3.1}%
+\contentsline {paragraph}{\numberline {2.1.3.2}Conclusion}{7}{paragraph.2.1.3.2}%
+\contentsline {subsection}{\numberline {2.2}Controller}{8}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Circuit}{8}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Components of the Controller}{9}{subsubsection.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.1}Peripheral Managing and Controlling Logic}{9}{paragraph.2.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.2.2}USB serial communication}{9}{paragraph.2.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.3}Arm safety circuit}{10}{paragraph.2.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.2.4}Additional circuits}{10}{paragraph.2.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.3}Socket and Plugs}{10}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Circuit board}{11}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Housing of the Controller}{12}{subsubsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.3}Trigger}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Circuit}{14}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}How does the trigger work?}{15}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Housing}{15}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Ignition Modules}{16}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Circuit}{16}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Housing}{17}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Firmware}{17}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}USB Connection}{17}{subsubsection.3.0.1}%
+\contentsline {section}{\numberline {4}Software}{17}{section.4}%
+\contentsline {section}{\numberline {5}Recognitions}{18}{section.5}%
