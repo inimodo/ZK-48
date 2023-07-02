@@ -9,7 +9,7 @@
 
 \Huge {Technical Documentation\\} 
 \vspace*{1cm}
-\Huge{\textbf{48 Output Wired and Programmable\\ Pyrotechnic Ignition System\\ based on the ATTINY 861\\}}
+\Huge{\textbf{48 Output Programmable\\ Wired Pyrotechnic Ignition System\\ based on the ATTINY 861\\}}
 \vspace*{0.5cm} 
 \Large{by Markus K. \textit{alias inimodo}}
 \vspace*{0.5cm}
@@ -210,8 +210,7 @@ For programming the µC has to communicate with a computer. This is the only bou
     \label{fig:uart_ttl}     
 \end{figure}
 
-\noindent The module depicted in \Cref{fig:uart_ttl} and the image rights belongs to \textit{Amazon}\footnote{\url{https://amzn.eu/d/3QKPgB9}}.\\
-
+\noindent \textit{\small{Source of \Cref{fig:uart_ttl}: \url{https://amzn.eu/d/3QKPgB9}}}\\
 
 \pagebreak
 
@@ -232,7 +231,7 @@ As the system will most likely be operated in the dark, the decision was made to
     \label{fig:mod_trig_connector}     
 \end{figure}
 
-\noindent The symbols in black visible in \Cref{fig:mod_trig_connector} of the socket belong to \textit{reichelt.de}\footnote{\url{https://cdn-reichelt.de/documents/datenblatt/C160/MAB\%205S-ROHS_XX.pdf}}\\
+\noindent \textit{\small{Source of socket sympol in \Cref{fig:mod_trig_connector}: \url{https://cdn-reichelt.de/documents/datenblatt/C160/MAB\%205S-ROHS_XX.pdf}}}\\
 
 \noindent To connect the peripheral devices to the controller DIN\footnote{\url{https://en.wikipedia.org/wiki/DIN_connector}} plugs and sockets were used. The modules socket and plug where chosen differently than the triggers, because plugging in the trigger into a module socket would damage the triggers electronics. For the pin-out of each socket see \Cref{fig:mod_trig_connector} and below in \Cref{fig:din_plug_socket} the modules socket and plug is visible.
 
@@ -245,7 +244,9 @@ As the system will most likely be operated in the dark, the decision was made to
     \label{fig:din_plug_socket}     
 \end{figure}
 
-\noindent The images visible in \Cref{fig:din_plug_socket} of the socket and plug belong to \textit{reichelt.de}\footnote{\url{https://cdn-reichelt.de/bilder/web/xxl_ws/C160/MAS_50.png}} \footnote{\url{https://cdn-reichelt.de/bilder/web/xxl_ws/C160/MAB_5.png}}\\
+
+\noindent \textit{\small{Source of \Cref{fig:din_plug_socket}: \url{https://cdn-reichelt.de/bilder/web/xxl_ws/C160/MAS_50.png} \\  \url{https://cdn-reichelt.de/bilder/web/xxl_ws/C160/MAB_5.png}}}\\
+
 
 \pagebreak
 
@@ -295,7 +296,7 @@ As the system will most likely be operated in the dark, the decision was made to
     \label{fig:gn_case}     
 \end{figure}
 
-\noindent The image of the gun case visible in \Cref{fig:gn_case} belongs to \textit{Amazon}\footnote{\url{https://amzn.eu/d/eWSlyFs}}\\
+\noindent \textit{\small{Source of \Cref{fig:gn_case}: \url{https://amzn.eu/d/eWSlyFs}}}\\
 
 \noindent A gun case was bought of \textit{Amazon} (See \Cref{fig:gn_case}), and the cushioning in the lower part of the case was removed to make room for the controller. The complete contorller interface was put into a case and screwed from the sides. \Cref{fig:controller_open} depicts the finished controller turned on. The earlier mentioned lighting(See \Cref{Components of the Controller} "Additional circuits") was installed in to top part of the case and the wires were hiden behind the cushioning. In \Cref{fig:controller_open} the wires can be seed coming from the top part of the case going to the lower part(See \Cref{fig:controller_open} right top corner).
 
@@ -346,7 +347,7 @@ The trigger receives one signal and sends three signals back. The first
 input signal is going to buzzer and is connected to the buzzer on board the controller (See \Cref{fig:controller_circuit}). This buzzer gives the user feedback on the state of the system by changing the frequency of the sound produced by the buzzer. But more about this topic in \Cref{Firmware}. One of the three outputs is the CONCD signal, which stands for "Connected" and tells the µC if the trigger is plugged in. This output is straight connected to the $+5V$ power line.
 The second output is the ARMED signal which indicates to the µC if the trigger is armed. This signal is produced by toggling the arm switch $SW1$ which also powers up the NE555 oscillator. If the trigger is armed, the NE555 will generate a $3,12kHz$ square-wave signal with a $52,2\%$ on-time. This signal is not passed through until the user holds down the fire $SW2$ button. Then the square-wave signal will be placed onto the FIRE line of the trigger, therefore starting the firing sequence. To indicate if the trigger has power, a small LED $D1$ is also present on the trigger.
 
-\subsubsection{Housing}
+\subsubsection{Housing of the Trigger}
 
 \begin{figure}[!ht]
     \centering
@@ -380,7 +381,7 @@ The second output is the ARMED signal which indicates to the µC if the trigger 
     \includegraphics[width=5cm]{./Figures/concept_modules.png} 
 \end{figure}
 
-\noindent The ignition modules are responsible for the ignition of the pyrotechnic effects, therefore carry a large responsibility. There is no room for error and a 100\% success rate is required. Each module has eight ports for the bridge wire detonators to be connected.
+\noindent The ignition modules are responsible for the ignition of the pyrotechnic effects, therefore carry a large responsibility. There is no margin of error, as the whole system depends on the ignition modules proper function. 
 
 \subsubsection{Circuit}
 
@@ -388,13 +389,88 @@ The second output is the ARMED signal which indicates to the µC if the trigger 
     \centering
     \includegraphics[width=15cm]{./Figures/module_circuit.png}
     \caption{The circuit of the ignition module.}
-    \label{fig:trigger_circuit}     
+    \label{fig:module_circuit}     
 \end{figure}
 
 \pagebreak
 
-\subsubsection{Housing}
+\subsubsection{How does the Ignition Module work?}
 
+\paragraph{Ignition Circuit}
+\noindent When setting off a bridge wire detonator, a current bigger than $500mA$ must flow for guaranteed ignition. This poses some challenges, because the switching transistor must be able to handle such currents repeatedly . Furthermore, considering that detonators can be faulty, for example have an internal short-circuit, those currents should not destroy the transistor. As well as the actual electrical requirements to the circuit, the cost of each module should stay on the lower end, as six modules are going to be build with eight ignition circuits.\\
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=8cm]{./Figures/module_ignitor.png}
+    \caption{The circuit responsible for setting off one bridge wire detonator inside the ignition module.}
+    \label{fig:module_ignitor}     
+\end{figure}
+
+\noindent All aforementioned considerations were dealt with by limiting the current through the transistor. Limiting the current was  accomplished by using a $15\Omega$ resistor after the bridge wire detonator (See \Cref{fig:module_ignitor} $R2$) which limits the current at $15V$ ignition voltage to maximal $1A$. Knowing the maximal current and considering the other requirements, the NPN transistor BC635\footnote{\url{https://www.tme.eu/Document/aa873a3a455ba8f13e3474bd76bcc1d9/BC635_40.pdf}} in a TO-92 package, was the best fit. Its continuous collector current is equal to $1A$ and a costs 9 cents per piece makes this choice ideal. To drive the BC635 a $270\Omega$ resistor was used to limit the base current to about $16mA$ (See \Cref{eq:base_current}), that results in the saturation of the transistor. \Cref{fig:module_ignitor} displays the complete ignition circuit.
+
+\begin{equation}
+I_B=\frac{U_{IC,OUT}-U_{BE}}{R}=\frac{5V-0,7V}{270\Omega}=15,93mA
+\label{eq:base_current}
+\end{equation}\\
+
+\noindent Designing this circuit also required selecting the ignition voltage. The reason why the ignition voltage is $15V$ and not $5V$, which would make things much simpler, lays inside Ohm's law: If the ignition voltage is $5V$ instead of $15V$ and the current is still limited to $1A$ in by a $5\Omega$ resistor, a reduction of the current through the detonator will occur. The calculations below (\Cref{eq:current_15v} and \Cref{eq:current_5v}) calculate the current for both cases, by simulating a bridge wire detonate with the same resistor value of $4,7\Omega$ as used in \Cref{Testing}.
+
+\begin{equation}
+I=\frac{U_{IG}}{R_2+R_{BWD}}=\frac{15V}{15\Omega+4,7\Omega}= 761,14mA
+\label{eq:current_15v}
+\end{equation}\\
+\begin{equation}
+I=\frac{U_{IG}}{R_2+R_{BWD}}=\frac{5V}{5\Omega+4,7\Omega}= 515,54mA
+\label{eq:current_5v}
+\end{equation}\\
+
+\noindent Compared result \Cref{eq:current_15v} to result of \Cref{eq:current_5v} a strong drop in current is noticeable. This is a problem that worsens with additional detonators connected. In a typical pyrotechnic show it is not unlikely for three or more detonators are connected in series(Parallel connection is not recommend in general). Of course a stronger transistor could be used but this could raise cost.\\
+
+\pagebreak
+
+\paragraph{Controlling the Ignition Circuits}
+As mentioned in previous sections, the modules are based on a 8-Bit SIPO (Serial-in Parallel-out) shift register 74HC595\footnote{\url{https://www.ti.com/lit/ds/symlink/sn74hc595.pdf}}. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=8cm]{./Figures/75hc595.png}
+    \caption{Functional diagram of the 74HC595}
+    \label{fig:75hc595}     
+\end{figure}
+
+\noindent \textit{\small{Source of \Cref{fig:75hc595}: \url{https://cdn-reichelt.de/documents/datenblatt/A240/74HC595\%23STM.pdf}}}\\
+
+\noindent The 74HC595 is made up of three parts: the shift register, a register and a tri-state buffer(See \Cref{fig:75hc595}). To fire a port, the µC sends a byte mask serially to the shift-register (In \Cref{fig:75hc595} see pin 14 SERIALIN and 11 SCK) where one bit is set, indicating which port is being fired. Because the register clock RCK and shift register clock SCK are wired together (See \Cref{fig:module_circuit}) the register will take on the values from the shift register. As explained in \Cref{Components of the Controller} "Peripheral Managing and Controlling Logic" the µC afterwards selects the correct module being fired which will result in pulling low the enable pin on the tri-state buffer (pin 13 in \Cref{fig:75hc595}). Thus outputting the stored bit mask of the register onto the parallel outputs. \Cref{fig:module_circuit} shows that each output is directly connected to one ignition circuit, whereby the setting of an output fires a detonator.\\
+
+\paragraph{Additional circuits}
+To reduce the currents through the cable to the ignition modules, a large $1000µF$ capacitor $C_2$ was added to the $15V$ ignition voltage (See \Cref{fig:module_circuit}). As charge would be stored closer to detonator theoretically this should reduce currents, however this is speculative and the capacitor might not be needed at all.\\
+
+
+\pagebreak
+
+\subsubsection{Housing of the Ignition Modules}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{./Figures/mod_open.JPG}
+    \caption{The ignition module from the inside.}
+    \label{fig:mod_open}     
+\end{figure}
+
+\noindent The circuit got soldered onto a perfboard and for the housing a common electrical junction box was used as it is cheap, light weight, easy cut-able and can be screwed against something. For connecting to the controller, four pieces of $4m$ and four pieces of $8m$ telephone cables were cut and soldered to the each of the eight modules circuit boards as seen in \Cref{fig:mod_open}. Also visible in \Cref{fig:mod_open} is the orange stabilizing $1000µF$ capacitor $C2$ seen in \Cref{fig:module_circuit}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{./Figures/mod_closed.JPG}
+    \caption{The complete ignition module with eight ports on the bottom and one power rail on the top.}
+    \label{fig:mod_closed}     
+\end{figure}
+
+\noindent To connect the bridge wire detonators to the circuit speaker terminals were used.  In \Cref{fig:mod_closed} the bottom two terminals are the eight ports and the top row are all $15V$. This design is less ideal because for two ports there is only one $15V$ terminal hole but due limited space on the housing this was necessary. \\
+
+\pagebreak
+
+\subsection{The Complete System}
 
 \section{Firmware}
 \label{Firmware}
@@ -402,9 +478,9 @@ The second output is the ARMED signal which indicates to the µC if the trigger 
 \subsubsection{USB Connection}
 \label{USB Connection}
 
-
 \section{Software}
 \label{Software}
+
 
 \pagebreak
 
