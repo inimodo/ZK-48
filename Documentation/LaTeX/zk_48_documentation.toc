@@ -13,10 +13,11 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Circuit}{8}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Components of the Controller}{9}{subsubsection.2.2.2}%
 \contentsline {paragraph}{\numberline {2.2.2.1}Peripheral Managing and Controlling Logic}{9}{paragraph.2.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.2.2}USB serial communication}{9}{paragraph.2.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.3}Arm safety circuit}{10}{paragraph.2.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.2.4}Additional circuits}{10}{paragraph.2.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.3}Socket and Plugs}{10}{subsubsection.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.2.2}Attiny 861}{9}{paragraph.2.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.3}USB serial communication}{9}{paragraph.2.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.2.4}Arm safety circuit}{10}{paragraph.2.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.2.5}Additional circuits}{10}{paragraph.2.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.3}Sockets and Plugs}{10}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}Circuit board}{11}{subsubsection.2.2.4}%
 \contentsline {subsubsection}{\numberline {2.2.5}Housing of the Controller}{12}{subsubsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.3}Trigger}{14}{subsection.2.3}%

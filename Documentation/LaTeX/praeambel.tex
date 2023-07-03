@@ -67,3 +67,9 @@
 \setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
 \crefname{paragraph}{paragraph}{paragraphs}
 \Crefname{paragraph}{Paragraph}{Paragraphs}
+
+% My commands :)
+
+\newcommand{\sourceurl}[3]{\noindent \textit{\small{Source of #1 \Cref{#2}: \url{#3}}}\\}
+
+\newcommand{\footurl}[1]{\footnote{\url{#1}}}
