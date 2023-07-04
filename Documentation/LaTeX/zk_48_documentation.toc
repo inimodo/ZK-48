@@ -31,8 +31,10 @@
 \contentsline {paragraph}{\numberline {2.4.2.2}Controlling the Ignition Circuits}{18}{paragraph.2.4.2.2}%
 \contentsline {paragraph}{\numberline {2.4.2.3}Additional circuits}{18}{paragraph.2.4.2.3}%
 \contentsline {subsubsection}{\numberline {2.4.3}Housing of the Ignition Modules}{19}{subsubsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.5}The Complete System}{20}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Firmware}{20}{section.3}%
 \contentsline {subsubsection}{\numberline {3.0.1}USB Connection}{20}{subsubsection.3.0.1}%
-\contentsline {section}{\numberline {4}Software}{20}{section.4}%
-\contentsline {section}{\numberline {5}Recognitions}{21}{section.5}%
+\contentsline {section}{\numberline {4}Software}{21}{section.4}%
+\contentsline {section}{\numberline {5}The Complete System}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Pricing}{22}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Conclusion}{22}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Recognitions}{23}{subsection.5.3}%
