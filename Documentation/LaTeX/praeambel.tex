@@ -20,7 +20,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\Large ZK-48}
-\fancyhead[C]{\Large Documentation}
+\fancyhead[C]{\Large Technical Documentation}
 \fancyhead[R]{\Large Page \thepage}
 \cfoot{\includegraphics[scale=0.06]{./Figures/zk_48_logo.png}}
 
@@ -73,3 +73,26 @@
 \newcommand{\sourceurl}[3]{\noindent \textit{\small{Source of #1 \Cref{#2}: \url{#3}}}\\}
 
 \newcommand{\footurl}[1]{\footnote{\url{#1}}}
+
+\lstdefinestyle{myStyle}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    frame=none,
+    numbers=none, 
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    backgroundcolor=\color{gray!10!white},
+}
+
+\lstset { %C++ Lisiting
+    language=C++,
+    backgroundcolor=\color{white} % set backgroundcolor
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{gray}\ttfamily,
+    morecomment=[l][\color{purple}]{\#},
+    numbers=left
+}

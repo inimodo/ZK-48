@@ -33,19 +33,106 @@
 
 \include{./zk_48_introduction.tex}
 \include{./zk_48_hardware.tex}
-\include{./zk_48_firmware.tex}
-\include{./zk_48_software.tex}
+%\include{./zk_48_firmware.tex}
+
+
+
+\section{Firmware}
+\label{Firmware}
+The firmware running on the Attiny861, is a basic Moore state machine\footurl{https://en.wikipedia.org/wiki/Moore_machine} with eight states. Each state performs a essential function  with distinct sound and LED outputs showing the current state. More about the state machine in \Cref{State Machine}. In \Cref{Components of the Firmware} the firmware code gets broken down in each functional group and function as well as explained what its task is. The code was written in \textit{C++}(Arduino \textit{C++}) inside the Arduino IDE. Read more about the programming of the Attiny, it self, in \Cref{Programming the Attiny861}.
+
+\subsection{Components of the Firmware}
+\label{Components of the Firmware}
+
+\subsubsection{Constants}
+The first section of code contains all necessary constants, as well as the including of the EEPROM.h\footurl{https://docs.arduino.cc/learn/built-in-libraries/eeprom} library needed for reading and writing to the internal EEPROM of the Attiny.
+
+\paragraph{Pinout}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=13cm]{./Figures/attiny861_pinout.jpg}
+    \caption{Pinout of the Attiny861 µC.}
+    \label{fig:attiny861_pinout}     
+\end{figure}
+
+\sourceurl{}{fig:attiny861_pinout}{https://github.com/SpenceKonde/ATTinyCore}
+
+\noindent All pins shown in \Cref{fig:attiny861_pinout} of the µC were used except non usable ones such as pin 18 which is the reset pin. The pin descriptors, used inside the firmware, are listed in \Cref{tab:pinio}.
+
+\begin{table}[!ht]
+    \centering
+	\begin{tabular}{|l|l|l|l|}\hline
+Pin & Name               & Type &Description \\ \hline \hline
+3   & MODUL\_DATA        & OUT & Dataline for serial data transmission\\ \hline
+4   & MODUL\_CLK         & OUT & Clock signal for serial data transmission\\ \hline
+2   & TRIGGER\_FIRE      & INT & Receives the trigger signal from the trigger\\ \hline
+0   & TRIGGER\_ARMED     & IN & High if trigger is armed\\ \hline
+1   & TRIGGER\_CONNECTED & IN & High if trigger is connected           \\ \hline
+8   & TRIGADD\_A0        & OUT & Address line for selecting the ignition module\\ \hline
+9   & TRIGADD\_A1        & OUT & Address line for selecting the ignition modul\\ \hline
+10  & TRIGADD\_1E        & OUT & Enable line for selecting the ignition modul\\ \hline
+11  & TRIGADD\_2E        & OUT & Enable line for selecting the ignition modul\\ \hline
+12  & STATUS\_RED        & OUT & Turns on the red status LED on the controller\\ \hline
+13  & STATUS\_GREEN      & OUT & Turns on the green status LED on the controller\\ \hline
+12  & STATUS\_PIEP       & OUT & Turns on the buzzer on controller and trigger\\ \hline
+14  & THIS\_ARMED        & IN & High if controller is armed\\ \hline
+7   & RX                 & IN & Receive signal for serial TTL communication\\ \hline
+6   & TX                 & OUT & Transmit signal for serial TTL communication\\ \hline
+	\end{tabular}
+	\caption{Signal descriptions of all used pins on the Attiny861}
+	\label{tab:pinio}
+\end{table}
+
+\pagebreak
+
+\paragraph{Module addressing}
+For addressing the modules inside code, a 2D byte array was used for controlling the two DMUX (See \Cref{Components of the Controller}) which enables simple addressing of the ignition modules by just a integer. 
+
+\lstinputlisting[frame=l,captionpos=b,firstline=28,lastline=47,caption=Bit array for controlling the DMUX,label=lst:dmuxctrl]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+Line 2 till 5 in \Cref{lst:dmuxctrl} define a alias for indexing the correct collum in \textit{module_resolve} as shown in line 10.
+
+\subsubsection{Setup}
+\paragraph{\textit{setup}}
+\pagebreak
+
+\subsubsection{EEPROM Functions}
+\paragraph{\textit{writeProgramEndpoint} and \textit{readProgramEndpoint}}
+\paragraph{\textit{writeProgramPoint} and \textit{readProgramPoint}}
+\pagebreak
+
+\subsubsection{Program Mode}
+\paragraph{\textit{checkPGM}}
+\paragraph{\textit{programmMode}}
+\pagebreak
+
+\subsubsection{IO Function}
+\paragraph{\textit{transmitData}}
+\paragraph{\textit{setModule}}
+\paragraph{\textit{ignite}}
+\paragraph{\textit{setLEDState}}
+\pagebreak
+
+\subsubsection{State Machine}
+\label{State Machine}
+\paragraph{\textit{FSM}}
+\pagebreak
+
+\subsubsection{Main Loop}
+\paragraph{\textit{loop}}
+\paragraph{\textit{fire}}
+\pagebreak
+
+\subsection{Programming the Attiny861}
+\label{Programming the Attiny861}
+
+
+\pagebreak
+
+
 \include{./zk_48_complete.tex}
 
-
-
-
-
-
-
-
-
-
-
+\include{./zk_48_appendix.tex}
 
 \end{document}

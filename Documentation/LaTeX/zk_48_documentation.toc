@@ -1,40 +1,63 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Legal Disclaimer}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Concept}{3}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Hardware}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The Ignition Voltage Generator}{4}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Circuit}{4}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}How does the circuit work?}{5}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Testing}{6}{subsubsection.2.1.3}%
-\contentsline {paragraph}{\numberline {2.1.3.1}Results}{6}{paragraph.2.1.3.1}%
-\contentsline {paragraph}{\numberline {2.1.3.2}Conclusion}{7}{paragraph.2.1.3.2}%
-\contentsline {subsection}{\numberline {2.2}Controller}{8}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Circuit}{8}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Components of the Controller}{9}{subsubsection.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.1}Peripheral Managing and Controlling Logic}{9}{paragraph.2.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.2.2}Attiny 861}{9}{paragraph.2.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.3}USB serial communication}{9}{paragraph.2.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.2.4}Arm safety circuit}{10}{paragraph.2.2.2.4}%
-\contentsline {paragraph}{\numberline {2.2.2.5}Additional circuits}{10}{paragraph.2.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.3}Sockets and Plugs}{10}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Circuit board}{11}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Housing of the Controller}{12}{subsubsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.3}Trigger}{14}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Circuit}{14}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}How does the trigger work?}{15}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Housing of the Trigger}{15}{subsubsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.4}Ignition Modules}{16}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Circuit}{16}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}How does the Ignition Module work?}{17}{subsubsection.2.4.2}%
-\contentsline {paragraph}{\numberline {2.4.2.1}Ignition Circuit}{17}{paragraph.2.4.2.1}%
-\contentsline {paragraph}{\numberline {2.4.2.2}Controlling the Ignition Circuits}{18}{paragraph.2.4.2.2}%
-\contentsline {paragraph}{\numberline {2.4.2.3}Additional circuits}{18}{paragraph.2.4.2.3}%
-\contentsline {subsubsection}{\numberline {2.4.3}Housing of the Ignition Modules}{19}{subsubsection.2.4.3}%
-\contentsline {section}{\numberline {3}Firmware}{20}{section.3}%
-\contentsline {subsubsection}{\numberline {3.0.1}USB Connection}{20}{subsubsection.3.0.1}%
-\contentsline {section}{\numberline {4}Software}{21}{section.4}%
-\contentsline {section}{\numberline {5}The Complete System}{22}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Pricing}{22}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Conclusion}{22}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Recognitions}{23}{subsection.5.3}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Legal Disclaimer}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Concept}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Hardware}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Ignition Voltage Generator}{5}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Circuit}{5}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}How does the circuit work?}{6}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Testing}{7}{subsubsection.2.1.3}%
+\contentsline {paragraph}{\numberline {2.1.3.1}Results}{7}{paragraph.2.1.3.1}%
+\contentsline {paragraph}{\numberline {2.1.3.2}Conclusion}{8}{paragraph.2.1.3.2}%
+\contentsline {subsection}{\numberline {2.2}Controller}{9}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Circuit}{9}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Components of the Controller}{10}{subsubsection.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.1}Peripheral Managing and Controlling Logic}{10}{paragraph.2.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.2.2}Attiny 861}{10}{paragraph.2.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.3}USB serial communication}{10}{paragraph.2.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.2.4}Arm safety circuit}{11}{paragraph.2.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.2.5}Additional circuits}{11}{paragraph.2.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.3}Sockets and Plugs}{11}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Circuit board}{12}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Housing of the Controller}{13}{subsubsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.3}Trigger}{15}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Circuit}{15}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}How does the trigger work?}{16}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Housing of the Trigger}{16}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Ignition Modules}{17}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Circuit}{17}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}How does the Ignition Module work?}{18}{subsubsection.2.4.2}%
+\contentsline {paragraph}{\numberline {2.4.2.1}Ignition Circuit}{18}{paragraph.2.4.2.1}%
+\contentsline {paragraph}{\numberline {2.4.2.2}Controlling the Ignition Circuits}{19}{paragraph.2.4.2.2}%
+\contentsline {paragraph}{\numberline {2.4.2.3}Additional circuits}{19}{paragraph.2.4.2.3}%
+\contentsline {subsubsection}{\numberline {2.4.3}Housing of the Ignition Modules}{20}{subsubsection.2.4.3}%
+\contentsline {section}{\numberline {3}Firmware}{21}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Components of the Firmware}{21}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Constants}{21}{subsubsection.3.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.1}Pinout}{21}{paragraph.3.1.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.2}Module addressing}{22}{paragraph.3.1.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2}Setup}{22}{subsubsection.3.1.2}%
+\contentsline {paragraph}{\numberline {3.1.2.1}\textit {setup}}{22}{paragraph.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.3}EEPROM Functions}{23}{subsubsection.3.1.3}%
+\contentsline {paragraph}{\numberline {3.1.3.1}\textit {writeProgramEndpoint} and \textit {readProgramEndpoint}}{23}{paragraph.3.1.3.1}%
+\contentsline {paragraph}{\numberline {3.1.3.2}\textit {writeProgramPoint} and \textit {readProgramPoint}}{23}{paragraph.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.4}Program Mode}{24}{subsubsection.3.1.4}%
+\contentsline {paragraph}{\numberline {3.1.4.1}\textit {checkPGM}}{24}{paragraph.3.1.4.1}%
+\contentsline {paragraph}{\numberline {3.1.4.2}\textit {programmMode}}{24}{paragraph.3.1.4.2}%
+\contentsline {subsubsection}{\numberline {3.1.5}IO Function}{25}{subsubsection.3.1.5}%
+\contentsline {paragraph}{\numberline {3.1.5.1}\textit {transmitData}}{25}{paragraph.3.1.5.1}%
+\contentsline {paragraph}{\numberline {3.1.5.2}\textit {setModule}}{25}{paragraph.3.1.5.2}%
+\contentsline {paragraph}{\numberline {3.1.5.3}\textit {ignite}}{25}{paragraph.3.1.5.3}%
+\contentsline {paragraph}{\numberline {3.1.5.4}\textit {setLEDState}}{25}{paragraph.3.1.5.4}%
+\contentsline {subsubsection}{\numberline {3.1.6}State Machine}{26}{subsubsection.3.1.6}%
+\contentsline {paragraph}{\numberline {3.1.6.1}\textit {FSM}}{26}{paragraph.3.1.6.1}%
+\contentsline {subsubsection}{\numberline {3.1.7}Main Loop}{27}{subsubsection.3.1.7}%
+\contentsline {paragraph}{\numberline {3.1.7.1}\textit {loop}}{27}{paragraph.3.1.7.1}%
+\contentsline {paragraph}{\numberline {3.1.7.2}\textit {fire}}{27}{paragraph.3.1.7.2}%
+\contentsline {subsection}{\numberline {3.2}Programming the Attiny861}{28}{subsection.3.2}%
+\contentsline {section}{\numberline {4}The Complete System}{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Pricing}{29}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Conclusion}{29}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Appendix}{30}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Firmware Code}{30}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Recognitions}{37}{subsection.5.2}%

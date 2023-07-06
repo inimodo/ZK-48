@@ -1,17 +1,17 @@
-// Copyright: Markus K. (alias inimodo) 2023
+// Copyright: Markus K. 2023
 // Github:    https://github.com/inimodo
 
 #include <EEPROM.h>
 
 #define MODUL_DATA 3
 #define MODUL_CLK 4
-#define ZUNDER_FIRE 2
-#define ZUNDER_ARMED 0
-#define ZUNDER_CONNECTED 1
-#define ZUNADD_A0 8
-#define ZUNADD_A1 9
-#define ZUNADD_1E 10
-#define ZUNADD_2E 11
+#define TRIGGER_FIRE 2
+#define TRIGGER_ARMED 0
+#define TRIGGER_CONNECTED 1
+#define TRIGADD_A0 8
+#define TRIGADD_A1 9
+#define TRIGADD_1E 10
+#define TRIGADD_2E 11
 #define STATUS_RED 12
 #define STATUS_PIEP 5
 #define STATUS_GREEN 13
@@ -77,7 +77,7 @@ short fire_pulse_counter = 0;
 // time each ignition pulse takes - depends on e-igniter
 #define IGNITION_TIME 10 // ms
 // clock speed of transmitData() !! do not change !!
-#define TRANSMISSION_SPEED 5 //µs
+#define TRANSMISSION_SPEED 5 //us
 
 #define BAUDRATE 57600
 
@@ -85,19 +85,20 @@ short fire_pulse_counter = 0;
 #define STATE_FIRE 6
 #define STATE_ARMED 5
 #define STATE_IDLE 4
-#define STATE_NO_ZUNDER 3
+#define STATE_NO_TRIGGER 3
 #define STATE_INIT 2
 #define STATE_PG_MODE 1
 
 byte state = STATE_INIT;
 byte wait_counter;
 
-// ################################### // Setup // ################################### //
+// ################# // Setup // ################# //
 
 void setup() {
 
   // this is not my code!
-  // source: https://community.platformio.org/t/attiny-8mhz-wrong-timing-in-delay-fastled-and-neopixel/24992/3
+  // source: https://community.platformio.org/t/
+  //         attiny-8mhz-wrong-timing-in-delay-fastled-and-neopixel/24992/3
   // start
   cli(); // Disable interrupts
   CLKPR = (1<<CLKPCE); // Prescaler enable
@@ -109,27 +110,27 @@ void setup() {
 
   pinMode(MODUL_DATA,OUTPUT);
   pinMode(MODUL_CLK,OUTPUT);
-  pinMode(ZUNADD_A0,OUTPUT);
-  pinMode(ZUNADD_A1,OUTPUT);
-  pinMode(ZUNADD_1E,OUTPUT);
-  pinMode(ZUNADD_2E,OUTPUT);
+  pinMode(TRIGADD_A0,OUTPUT);
+  pinMode(TRIGADD_A1,OUTPUT);
+  pinMode(TRIGADD_1E,OUTPUT);
+  pinMode(TRIGADD_2E,OUTPUT);
   pinMode(STATUS_PIEP,OUTPUT);
   pinMode(STATUS_RED,OUTPUT);
   pinMode(STATUS_GREEN,OUTPUT); 
   
-  pinMode(ZUNDER_FIRE,INPUT);
-  pinMode(ZUNDER_ARMED,INPUT);
-  pinMode(ZUNDER_CONNECTED,INPUT);
+  pinMode(TRIGGER_FIRE,INPUT);
+  pinMode(TRIGGER_ARMED,INPUT);
+  pinMode(TRIGGER_CONNECTED,INPUT);
   pinMode(THIS_ARMED,INPUT);
 
   transmitData(CLEAR_REG);
   setModule(ALL_OFF);
   pg_stop = readProgramEndpoint();
     
-  attachInterrupt(digitalPinToInterrupt(ZUNDER_FIRE),fire,RISING);
+  attachInterrupt(digitalPinToInterrupt(TRIGGER_FIRE),fire,RISING);
 }
 
-// ################################### // EEPROM Functions // ################################### //
+// ################# // EEPROM Functions // ################# //
 
 void writeProgramEndpoint(byte endpoint)
 {
@@ -143,7 +144,7 @@ byte readProgramEndpoint()
 
 void writeProgramPoint(byte index,section pg_point)
 {
-  short real_address = index*sizeof(section) + sizeof(byte); // + byte size because of stop index
+  short real_address = index*sizeof(section) + sizeof(byte);
   EEPROM.put(real_address,pg_point);
   
 }
@@ -151,12 +152,12 @@ void writeProgramPoint(byte index,section pg_point)
 section readProgramPoint(byte index)
 {
   section pg_point;
-  short real_address = index*sizeof(section) + sizeof(byte); // + byte size because of stop index
+  short real_address = index*sizeof(section) + sizeof(byte);
   EEPROM.get(real_address,pg_point);
   return pg_point;
 }
 
-// ################################### // Program Mode // ################################### //
+// ################# // Program Mode // ################# //
 
 // checks if program mode must be entered
 char checkPGM()
@@ -166,12 +167,17 @@ char checkPGM()
     String str_buffer = Serial.readString();    
     char split_index[PGM_MAXARGS];
     split_index[0] = str_buffer.indexOf(PGM_START_CHAR);
-    for(int index=1; index<PGM_MAXARGS; index++)
+    for(int index=1; index < PGM_MAXARGS; index++)
     {
-      split_index[index] = str_buffer.indexOf(PGM_ARG_CHAR,split_index[index-1]+1);
+      split_index[index] = str_buffer.indexOf(
+        PGM_ARG_CHAR,
+        split_index[index-1]+1);
     }
     
-    str_buffer = str_buffer.substring(split_index[0]+1,split_index[1]);
+    str_buffer = str_buffer.substring(
+      split_index[0]+1,
+      split_index[1]);
+      
     if(str_buffer.compareTo("pgm")==0)
     {
       return true;
@@ -192,7 +198,9 @@ byte programmMode()
     split_index[0] = str_buffer.indexOf(PGM_START_CHAR);
     for(int index=1; index<PGM_MAXARGS; index++)
     {
-      split_index[index] = str_buffer.indexOf(PGM_ARG_CHAR,split_index[index-1]+1);
+      split_index[index] = str_buffer.indexOf(
+        PGM_ARG_CHAR,
+        split_index[index-1]+1);
     }
     
     String cmd = str_buffer.substring(split_index[0]+1,split_index[1]);
@@ -223,16 +231,29 @@ byte programmMode()
     }else if(cmd== cmd_stop)
     {
       pg_stop = str_buffer.substring(split_index[1]+1,split_index[2]).toInt();
+        
       writeProgramEndpoint(pg_stop);
       Serial.println("!stop:");
       return;
     }else if(cmd== cmd_set)
     {
-      byte index = str_buffer.substring(split_index[1]+1,split_index[2]).toInt();     
+      byte index = str_buffer.substring(
+        split_index[1]+1,
+        split_index[2]).toInt();   
+          
       section new_pgpoint;
-      new_pgpoint.msdelay = (unsigned short)str_buffer.substring(split_index[4]+1,split_index[5]).toInt();
-      new_pgpoint.port = (byte)str_buffer.substring(split_index[3]+1,split_index[4]).toInt();
-      new_pgpoint.module = (byte)str_buffer.substring(split_index[2]+1,split_index[3]).toInt();
+      
+      new_pgpoint.msdelay = (unsigned short)str_buffer.substring(
+        split_index[4]+1,
+        split_index[5]).toInt();
+        
+      new_pgpoint.port = (byte)str_buffer.substring(
+        split_index[3]+1,
+        split_index[4]).toInt();
+        
+      new_pgpoint.module = (byte)str_buffer.substring(
+        split_index[2]+1,
+        split_index[3]).toInt();
 
       writeProgramPoint(index,new_pgpoint);
       
@@ -243,7 +264,7 @@ byte programmMode()
   }
 }
 
-// ################################### // IO Functions // ################################### //
+// ################# // IO Functions // ################# //
 
 // sets the port on ALL modules
 void transmitData(byte port)
@@ -268,10 +289,10 @@ void transmitData(byte port)
 // selects what module is meant to ignite the set Port
 void setModule(byte module)
 {
-  digitalWrite(ZUNADD_A0,module_resolve[module][nA0]);
-  digitalWrite(ZUNADD_A1,module_resolve[module][nA1]);
-  digitalWrite(ZUNADD_1E,module_resolve[module][E1]);
-  digitalWrite(ZUNADD_2E,module_resolve[module][E2]);
+  digitalWrite(TRIGADD_A0,module_resolve[module][nA0]);
+  digitalWrite(TRIGADD_A1,module_resolve[module][nA1]);
+  digitalWrite(TRIGADD_1E,module_resolve[module][E1]);
+  digitalWrite(TRIGADD_2E,module_resolve[module][E2]);
 }
 
 // ignites a port on a given module
@@ -294,15 +315,15 @@ void setLEDState(byte G,byte R,byte P)
   digitalWrite(STATUS_PIEP,P);
 }
 
-// ################################### // State Machine // ################################### //
+// ################# // State Machine // ################# //
 
 // does what the name implies 
 byte FSM(byte state)
 {
   byte PG = checkPGM();
-  byte ZD = digitalRead(ZUNDER_FIRE);
-  byte ZA = digitalRead(ZUNDER_ARMED);
-  byte ZC = digitalRead(ZUNDER_CONNECTED);
+  byte ZD = digitalRead(TRIGGER_FIRE);
+  byte ZA = digitalRead(TRIGGER_ARMED);
+  byte ZC = digitalRead(TRIGGER_CONNECTED);
   byte TA = digitalRead(THIS_ARMED);
 
   byte new_state = state;
@@ -319,8 +340,7 @@ byte FSM(byte state)
       
       break;
     case STATE_INIT:
-      if(PG == 1)new_state = STATE_PG_MODE;
-      else if(PG == 0)new_state = STATE_NO_ZUNDER;
+      if(PG == 0)new_state = STATE_NO_TRIGGER;
       else if(ZA == 0 && ZC == 1 && TA == 0)new_state = STATE_IDLE;
             
       for(int i = 0;i<3;i++){
@@ -331,27 +351,26 @@ byte FSM(byte state)
       }
       
       break;
-    case STATE_NO_ZUNDER:
-      setLEDState(HIGH,LOW,LOW);
-      delay(250);
-      setLEDState(LOW,HIGH,LOW); 
-      delay(250);
-
+    case STATE_NO_TRIGGER:
       if(PG == 1)new_state = STATE_PG_MODE;
       else if(ZA == 0 && ZC == 1 && TA == 0)new_state = STATE_IDLE;
       
+      setLEDState(HIGH,LOW,LOW);
+      delay(250);
+      setLEDState(LOW,HIGH,LOW); 
+      delay(250);      
       break;
     case STATE_IDLE:
       if(PG == 1)new_state = STATE_PG_MODE;
-      else if(ZC == 0) new_state = STATE_NO_ZUNDER;
+      else if(ZC == 0) new_state = STATE_NO_TRIGGER;
       else if(ZA == 1 && TA == 1) new_state = STATE_ARMED;
 
+      wait_counter = 0;
+      
       setLEDState(HIGH,LOW,LOW);
       delay(100);
       setLEDState(LOW,LOW,LOW);
       delay(500);
-
-      wait_counter = 0;
       break;
     case STATE_ARMED:        
       if(ZA == 0)new_state = STATE_IDLE;
@@ -377,7 +396,6 @@ byte FSM(byte state)
       setLEDState(LOW,LOW,LOW);
       delay(50);
       break;
-      
     case STATE_FIRE:
       if(ZA == 0)new_state = STATE_IDLE;
       else if(TA == 0)new_state = STATE_IDLE;
@@ -401,7 +419,7 @@ byte FSM(byte state)
   return new_state;
 }
 
-// ################################### // Main Loop // ################################### //
+// ################# // Main Loop // ################# //
 
 void loop() {
 

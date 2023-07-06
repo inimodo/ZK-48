@@ -292,7 +292,6 @@ As the system most likely will be operated in the dark, the decision was made to
 \subsubsection{How does the trigger work?}
 The trigger receives one signal and sends three signals back. The first input signal is going to buzzer and is connected to the buzzer on board the controller (See \Cref{fig:controller_circuit}). This buzzer gives the user feedback on the state of the system by changing the frequency of the sound produced. But more about this topic in \Cref{Firmware}. One of the three outputs is the CONCD signal, which stands for "Connected" and tells the µC if the trigger is plugged in. This output is straight connected to the $+5V$ power line. The second output is the ARMED signal which indicates to the µC if the trigger is armed. This signal is produced by toggling the arm switch $SW1$ which also turns on the NE555 oscillator. If the trigger is armed, the NE555 will generate a $3,12kHz$ square-wave signal with a $52,2\%$ on-time. This signal is not passed through, until the user holds down the fire $SW2$ button. Then, the square-wave signal will be put through on the FIRE line of the trigger, therefore starting the firing sequence. A small LED $D1$ is also present on the trigger to indicate if the trigger has power.
 
-%Corrected till here
 
 \subsubsection{Housing of the Trigger}
 
@@ -385,7 +384,7 @@ As mentioned in previous sections, the modules are based on a 8-Bit SIPO (Serial
     \label{fig:75hc595}     
 \end{figure}
 
-\noindent \textit{\small{Source of \Cref{fig:75hc595}: \url{https://cdn-reichelt.de/documents/datenblatt/A240/74HC595\%23STM.pdf}}}\\
+\sourceurl{}{fig:75hc595}{https://cdn-reichelt.de/documents/datenblatt/A240/74HC595\%23STM.pdf}
 
 \noindent The 74HC595 is made up of three components: the shift register, a register and a tri-state buffer(See \Cref{fig:75hc595}). To fire a port, the µC sends a byte mask serially to the shift-register (In \Cref{fig:75hc595} see pin 14 SERIALIN and 11 SCK) where only one bit is set, indicating which port is being fired. Because the register clock RCK and shift register clock SCK are wired together (See \Cref{fig:module_circuit}) the register will take on the values from the shift register. As explained in \Cref{Components of the Controller} "Peripheral Managing and Controlling Logic" the µC afterwards selects the correct module being fired by pulling low of the enable pin on the tri-state buffer (pin 13 in \Cref{fig:75hc595}), thus outputting the stored bit mask of the register onto the parallel outputs. \Cref{fig:module_circuit} shows that each output is directly connected to one ignition circuit, whereby the setting of an output fires a detonator.\\
 
