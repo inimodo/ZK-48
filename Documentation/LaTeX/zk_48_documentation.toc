@@ -32,32 +32,27 @@
 \contentsline {paragraph}{\numberline {2.4.2.3}Additional circuits}{19}{paragraph.2.4.2.3}%
 \contentsline {subsubsection}{\numberline {2.4.3}Housing of the Ignition Modules}{20}{subsubsection.2.4.3}%
 \contentsline {section}{\numberline {3}Firmware}{21}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Components of the Firmware}{21}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Constants}{21}{subsubsection.3.1.1}%
-\contentsline {paragraph}{\numberline {3.1.1.1}Pinout}{21}{paragraph.3.1.1.1}%
-\contentsline {paragraph}{\numberline {3.1.1.2}Module addressing}{22}{paragraph.3.1.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2}Setup}{22}{subsubsection.3.1.2}%
-\contentsline {paragraph}{\numberline {3.1.2.1}\textit {setup}}{22}{paragraph.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.1.3}EEPROM Functions}{23}{subsubsection.3.1.3}%
-\contentsline {paragraph}{\numberline {3.1.3.1}\textit {writeProgramEndpoint} and \textit {readProgramEndpoint}}{23}{paragraph.3.1.3.1}%
-\contentsline {paragraph}{\numberline {3.1.3.2}\textit {writeProgramPoint} and \textit {readProgramPoint}}{23}{paragraph.3.1.3.2}%
-\contentsline {subsubsection}{\numberline {3.1.4}Program Mode}{24}{subsubsection.3.1.4}%
-\contentsline {paragraph}{\numberline {3.1.4.1}\textit {checkPGM}}{24}{paragraph.3.1.4.1}%
-\contentsline {paragraph}{\numberline {3.1.4.2}\textit {programmMode}}{24}{paragraph.3.1.4.2}%
-\contentsline {subsubsection}{\numberline {3.1.5}IO Function}{25}{subsubsection.3.1.5}%
-\contentsline {paragraph}{\numberline {3.1.5.1}\textit {transmitData}}{25}{paragraph.3.1.5.1}%
-\contentsline {paragraph}{\numberline {3.1.5.2}\textit {setModule}}{25}{paragraph.3.1.5.2}%
-\contentsline {paragraph}{\numberline {3.1.5.3}\textit {ignite}}{25}{paragraph.3.1.5.3}%
-\contentsline {paragraph}{\numberline {3.1.5.4}\textit {setLEDState}}{25}{paragraph.3.1.5.4}%
-\contentsline {subsubsection}{\numberline {3.1.6}State Machine}{26}{subsubsection.3.1.6}%
-\contentsline {paragraph}{\numberline {3.1.6.1}\textit {FSM}}{26}{paragraph.3.1.6.1}%
-\contentsline {subsubsection}{\numberline {3.1.7}Main Loop}{27}{subsubsection.3.1.7}%
-\contentsline {paragraph}{\numberline {3.1.7.1}\textit {loop}}{27}{paragraph.3.1.7.1}%
-\contentsline {paragraph}{\numberline {3.1.7.2}\textit {fire}}{27}{paragraph.3.1.7.2}%
-\contentsline {subsection}{\numberline {3.2}Programming the Attiny861}{28}{subsection.3.2}%
-\contentsline {section}{\numberline {4}The Complete System}{29}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Pricing}{29}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Conclusion}{29}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Appendix}{30}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Firmware Code}{30}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Recognitions}{37}{subsection.5.2}%
+\contentsline {subsection}{\numberline {3.1}Pinout}{21}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Setup}{22}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Ignition of a Port}{23}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Ignition Module addressing}{23}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Serial Data Transmission}{24}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}State Machine}{25}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}State Variables}{26}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}States}{27}{subsubsection.3.4.2}%
+\contentsline {paragraph}{\numberline {3.4.2.1}\textit {PG\_MODE}}{27}{paragraph.3.4.2.1}%
+\contentsline {paragraph}{\numberline {3.4.2.2}\textit {INIT}}{27}{paragraph.3.4.2.2}%
+\contentsline {paragraph}{\numberline {3.4.2.3}\textit {NO\_TRIGGER}}{27}{paragraph.3.4.2.3}%
+\contentsline {paragraph}{\numberline {3.4.2.4}\textit {ARMED}}{27}{paragraph.3.4.2.4}%
+\contentsline {paragraph}{\numberline {3.4.2.5}\textit {WAIT}}{27}{paragraph.3.4.2.5}%
+\contentsline {paragraph}{\numberline {3.4.2.6}\textit {FIRE}}{27}{paragraph.3.4.2.6}%
+\contentsline {subsection}{\numberline {3.5}Program Mode}{27}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Entering the Program Mode}{27}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Instruction Set}{27}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Instruction Decoding}{27}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Programming the Attiny861}{27}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Appendix}{28}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Pricing}{28}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Conclusion}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Firmware Code}{29}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Recognitions}{36}{subsection.4.4}%

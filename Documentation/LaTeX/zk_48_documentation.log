@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.21)  6 JUL 2023 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.21)  14 JUL 2023 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -537,7 +537,7 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box67
 ) (zk_48_documentation.aux (zk_48_introduction.aux)
-(zk_48_hardware.aux) (zk_48_complete.aux) (zk_48_appendix.aux))
+(zk_48_hardware.aux) (zk_48_appendix.aux))
 \openout1 = `zk_48_documentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -633,7 +633,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 9.
-<./Figures/zk_48_logo.png, id=251, 480.79625pt x 740.7675pt>
+<./Figures/zk_48_logo.png, id=231, 480.79625pt x 740.7675pt>
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 14.
@@ -668,7 +668,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 ...7.1}\textit {loop}}{27}{paragraph.3.1.7.1}
+l.55 ...mberline {4.1}Pricing}{27}{subsection.4.1}
                                                   % [1])
 \tf@toc=\write4
 \openout4 = `zk_48_documentation.toc'.
@@ -687,7 +687,7 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 \openout2 = `./zk_48_introduction.aux'.
 
  (zk_48_introduction.tex
-<./Figures/complete_with_trig_and_mod.JPG, id=337, 1703.5645pt x 1037.476pt>
+<./Figures/complete_with_trig_and_mod.JPG, id=312, 1703.5645pt x 1037.476pt>
 File: ./Figures/complete_with_trig_and_mod.JPG Graphic file (type jpg)
 <use ./Figures/complete_with_trig_and_mod.JPG>
 Package pdftex.def Info: ./Figures/complete_with_trig_and_mod.JPG  used on inpu
@@ -722,7 +722,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.18 \subsection
                 {Concept} <./Figures/complete_with_trig_and_mod.JPG>]
-<./Figures/concept_all.png, id=352, 442.65375pt x 221.82875pt>
+<./Figures/concept_all.png, id=327, 442.65375pt x 221.82875pt>
 File: ./Figures/concept_all.png Graphic file (type png)
 <use ./Figures/concept_all.png>
 Package pdftex.def Info: ./Figures/concept_all.png  used on input line 24.
@@ -766,12 +766,12 @@ l.34 \include{./zk_48_introduction.tex}
 
 
 (zk_48_hardware.tex
-<./Figures/concept_ivg.png, id=363, 442.65375pt x 222.8325pt>
+<./Figures/concept_ivg.png, id=338, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_ivg.png Graphic file (type png)
 <use ./Figures/concept_ivg.png>
 Package pdftex.def Info: ./Figures/concept_ivg.png  used on input line 12.
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/ivg_circuit.png, id=367, 2263.45625pt x 1527.7075pt>
+<./Figures/ivg_circuit.png, id=342, 2263.45625pt x 1527.7075pt>
 File: ./Figures/ivg_circuit.png Graphic file (type png)
 <use ./Figures/ivg_circuit.png>
 Package pdftex.def Info: ./Figures/ivg_circuit.png  used on input line 22.
@@ -839,7 +839,7 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
 [6]
-<./Figures/testrig_pulse.png, id=406, 1049.9225pt x 722.7pt>
+<./Figures/testrig_pulse.png, id=381, 1049.9225pt x 722.7pt>
 File: ./Figures/testrig_pulse.png Graphic file (type png)
 <use ./Figures/testrig_pulse.png>
 Package pdftex.def Info: ./Figures/testrig_pulse.png  used on input line 55.
@@ -849,7 +849,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-<./Figures/eight_pulses_close.png, id=411, 803.0pt x 481.8pt>
+<./Figures/eight_pulses_close.png, id=386, 803.0pt x 481.8pt>
 File: ./Figures/eight_pulses_close.png Graphic file (type png)
 <use ./Figures/eight_pulses_close.png>
 Package pdftex.def Info: ./Figures/eight_pulses_close.png  used on input line 6
@@ -878,7 +878,7 @@ s been already used, duplicate ignored
 l.75 
       <./Figures/testrig_pulse.png> <./Figures/eight_pulses_close.png (PNG copy
 )>]
-<./Figures/eight_pulses_wide.png, id=426, 803.0pt x 481.8pt>
+<./Figures/eight_pulses_wide.png, id=401, 803.0pt x 481.8pt>
 File: ./Figures/eight_pulses_wide.png Graphic file (type png)
 <use ./Figures/eight_pulses_wide.png>
 Package pdftex.def Info: ./Figures/eight_pulses_wide.png  used on input line 79
@@ -889,7 +889,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-<./Figures/max_pulses.png, id=428, 803.0pt x 481.8pt>
+<./Figures/max_pulses.png, id=403, 803.0pt x 481.8pt>
 File: ./Figures/max_pulses.png Graphic file (type png)
 <use ./Figures/max_pulses.png>
 Package pdftex.def Info: ./Figures/max_pulses.png  used on input line 90.
@@ -917,13 +917,13 @@ s been already used, duplicate ignored
 l.102 
        <./Figures/eight_pulses_wide.png (PNG copy)> <./Figures/max_pulses.png (
 PNG copy)>]
-<./Figures/concept_controller.png, id=436, 442.65375pt x 222.8325pt>
+<./Figures/concept_controller.png, id=411, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_controller.png Graphic file (type png)
 <use ./Figures/concept_controller.png>
 Package pdftex.def Info: ./Figures/concept_controller.png  used on input line 1
 09.
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/controller_circuit.png, id=438, 3306.3525pt x 2274.4975pt>
+<./Figures/controller_circuit.png, id=413, 3306.3525pt x 2274.4975pt>
 File: ./Figures/controller_circuit.png Graphic file (type png)
 <use ./Figures/controller_circuit.png>
 Package pdftex.def Info: ./Figures/controller_circuit.png  used on input line 1
@@ -971,7 +971,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-<./Figures/uart_ttl.jpg, id=458, 1374.13374pt x 1195.46625pt>
+<./Figures/uart_ttl.jpg, id=433, 1374.13374pt x 1195.46625pt>
 File: ./Figures/uart_ttl.jpg Graphic file (type jpg)
 <use ./Figures/uart_ttl.jpg>
 Package pdftex.def Info: ./Figures/uart_ttl.jpg  used on input line 145.
@@ -1008,7 +1008,7 @@ LaTeX Warning: Command \textmu invalid in math mode on input line 157.
 LaTeX Warning: Command \textmu invalid in math mode on input line 157.
 
 Missing character: There is no µ in font cmr9!
-<./Figures/mod_trig_connector.png, id=477, 953.5625pt x 260.975pt>
+<./Figures/mod_trig_connector.png, id=452, 953.5625pt x 260.975pt>
 File: ./Figures/mod_trig_connector.png Graphic file (type png)
 <use ./Figures/mod_trig_connector.png>
 Package pdftex.def Info: ./Figures/mod_trig_connector.png  used on input line 1
@@ -1019,12 +1019,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-<./Figures/MAB_5.jpg, id=484, 301.125pt x 301.125pt>
+<./Figures/MAB_5.jpg, id=459, 301.125pt x 301.125pt>
 File: ./Figures/MAB_5.jpg Graphic file (type jpg)
 <use ./Figures/MAB_5.jpg>
 Package pdftex.def Info: ./Figures/MAB_5.jpg  used on input line 179.
 (pdftex.def)             Requested size: 85.35826pt x 85.35744pt.
-<./Figures/MAS_50.jpg, id=485, 301.125pt x 301.125pt>
+<./Figures/MAS_50.jpg, id=460, 301.125pt x 301.125pt>
 File: ./Figures/MAS_50.jpg Graphic file (type jpg)
 <use ./Figures/MAS_50.jpg>
 Package pdftex.def Info: ./Figures/MAS_50.jpg  used on input line 181.
@@ -1057,7 +1057,7 @@ as been already used, duplicate ignored
 l.190 
        <./Figures/mod_trig_connector.png> <./Figures/MAB_5.jpg> <./Figures/MAS_
 50.jpg>]
-<./Figures/dev_controller.jpeg, id=499, 1606.0pt x 1204.5pt>
+<./Figures/dev_controller.jpeg, id=474, 1606.0pt x 1204.5pt>
 File: ./Figures/dev_controller.jpeg Graphic file (type jpg)
 <use ./Figures/dev_controller.jpeg>
 Package pdftex.def Info: ./Figures/dev_controller.jpeg  used on input line 196.
@@ -1068,7 +1068,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-<./Figures/controller_circuit_soldered.JPG, id=502, 1114.9655pt x 908.996pt>
+<./Figures/controller_circuit_soldered.JPG, id=477, 1114.9655pt x 908.996pt>
 File: ./Figures/controller_circuit_soldered.JPG Graphic file (type jpg)
 <use ./Figures/controller_circuit_soldered.JPG>
 Package pdftex.def Info: ./Figures/controller_circuit_soldered.JPG  used on inp
@@ -1097,7 +1097,7 @@ as been already used, duplicate ignored
 l.215 
        <./Figures/dev_controller.jpeg> <./Figures/controller_circuit_soldered.J
 PG>]
-<./Figures/controller_plate_top.JPG, id=514, 1264.725pt x 957.176pt>
+<./Figures/controller_plate_top.JPG, id=489, 1264.725pt x 957.176pt>
 File: ./Figures/controller_plate_top.JPG Graphic file (type jpg)
 <use ./Figures/controller_plate_top.JPG>
 Package pdftex.def Info: ./Figures/controller_plate_top.JPG  used on input line
@@ -1108,7 +1108,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<./Figures/controller_plate_side.JPG, id=518, 1546.9795pt x 642.4pt>
+<./Figures/controller_plate_side.JPG, id=493, 1546.9795pt x 642.4pt>
 File: ./Figures/controller_plate_side.JPG Graphic file (type jpg)
 <use ./Figures/controller_plate_side.JPG>
 Package pdftex.def Info: ./Figures/controller_plate_side.JPG  used on input lin
@@ -1137,7 +1137,7 @@ as been already used, duplicate ignored
 l.238 
        <./Figures/controller_plate_top.JPG> <./Figures/controller_plate_side.JP
 G>]
-<./Figures/gn_case.jpg, id=531, 1218.5525pt x 1404.24625pt>
+<./Figures/gn_case.jpg, id=506, 1218.5525pt x 1404.24625pt>
 File: ./Figures/gn_case.jpg Graphic file (type jpg)
 <use ./Figures/gn_case.jpg>
 Package pdftex.def Info: ./Figures/gn_case.jpg  used on input line 241.
@@ -1147,7 +1147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
-<./Figures/controller_open_legend.png, id=539, 1171.1755pt x 949.5475pt>
+<./Figures/controller_open_legend.png, id=514, 1171.1755pt x 949.5475pt>
 File: ./Figures/controller_open_legend.png Graphic file (type png)
 <use ./Figures/controller_open_legend.png>
 Package pdftex.def Info: ./Figures/controller_open_legend.png  used on input li
@@ -1175,13 +1175,13 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.271 
        <./Figures/gn_case.jpg> <./Figures/controller_open_legend.png>]
-<./Figures/concept_trigger.png, id=556, 442.65375pt x 222.8325pt>
+<./Figures/concept_trigger.png, id=531, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_trigger.png Graphic file (type png)
 <use ./Figures/concept_trigger.png>
 Package pdftex.def Info: ./Figures/concept_trigger.png  used on input line 276.
 
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/trigger_circuit.png, id=557, 2263.45625pt x 1527.7075pt>
+<./Figures/trigger_circuit.png, id=532, 2263.45625pt x 1527.7075pt>
 File: ./Figures/trigger_circuit.png Graphic file (type png)
 <use ./Figures/trigger_circuit.png>
 Package pdftex.def Info: ./Figures/trigger_circuit.png  used on input line 285.
@@ -1204,12 +1204,12 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.291 
        <./Figures/concept_trigger.png> <./Figures/trigger_circuit.png>]
-<./Figures/trig_open.JPG, id=567, 1330.9725pt x 748.7975pt>
+<./Figures/trig_open.JPG, id=542, 1330.9725pt x 748.7975pt>
 File: ./Figures/trig_open.JPG Graphic file (type jpg)
 <use ./Figures/trig_open.JPG>
 Package pdftex.def Info: ./Figures/trig_open.JPG  used on input line 300.
 (pdftex.def)             Requested size: 284.52756pt x 160.06284pt.
-<./Figures/trig_with_cable_legend.png, id=572, 1626.878pt x 915.42pt>
+<./Figures/trig_with_cable_legend.png, id=547, 1626.878pt x 915.42pt>
 File: ./Figures/trig_with_cable_legend.png Graphic file (type png)
 <use ./Figures/trig_with_cable_legend.png>
 Package pdftex.def Info: ./Figures/trig_with_cable_legend.png  used on input li
@@ -1238,13 +1238,13 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.321 
        <./Figures/trig_open.JPG> <./Figures/trig_with_cable_legend.png>]
-<./Figures/concept_modules.png, id=582, 442.65375pt x 222.8325pt>
+<./Figures/concept_modules.png, id=557, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_modules.png Graphic file (type png)
 <use ./Figures/concept_modules.png>
 Package pdftex.def Info: ./Figures/concept_modules.png  used on input line 327.
 
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/module_circuit.png, id=583, 3306.3525pt x 2274.4975pt>
+<./Figures/module_circuit.png, id=558, 3306.3525pt x 2274.4975pt>
 File: ./Figures/module_circuit.png Graphic file (type png)
 <use ./Figures/module_circuit.png>
 Package pdftex.def Info: ./Figures/module_circuit.png  used on input line 336.
@@ -1270,7 +1270,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-<./Figures/module_ignitor.png, id=591, 670.505pt x 401.5pt>
+<./Figures/module_ignitor.png, id=566, 670.505pt x 401.5pt>
 File: ./Figures/module_ignitor.png Graphic file (type png)
 <use ./Figures/module_ignitor.png>
 Package pdftex.def Info: ./Figures/module_ignitor.png  used on input line 350.
@@ -1311,10 +1311,11 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.376 
        <./Figures/module_ignitor.png>]
-<./Figures/75hc595.png, id=617, 503.63156pt x 397.485pt>
-File: ./Figures/75hc595.png Graphic file (type png)
-<use ./Figures/75hc595.png>
-Package pdftex.def Info: ./Figures/75hc595.png  used on input line 382.
+<./Figures/75hc595_functional.png, id=592, 503.63156pt x 397.485pt>
+File: ./Figures/75hc595_functional.png Graphic file (type png)
+<use ./Figures/75hc595_functional.png>
+Package pdftex.def Info: ./Figures/75hc595_functional.png  used on input line 3
+82.
 (pdftex.def)             Requested size: 227.62204pt x 179.64899pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 387--388
@@ -1353,13 +1354,13 @@ as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.396 
-       <./Figures/75hc595.png>]
-<./Figures/raw_modules.jpeg, id=634, 1203.7472pt x 902.6222pt>
+       <./Figures/75hc595_functional.png>]
+<./Figures/raw_modules.jpeg, id=609, 1203.7472pt x 902.6222pt>
 File: ./Figures/raw_modules.jpeg Graphic file (type jpg)
 <use ./Figures/raw_modules.jpeg>
 Package pdftex.def Info: ./Figures/raw_modules.jpeg  used on input line 401.
 (pdftex.def)             Requested size: 199.16928pt x 149.33942pt.
-<./Figures/mod_open.JPG, id=638, 1260.71pt x 709.4505pt>
+<./Figures/mod_open.JPG, id=613, 1260.71pt x 709.4505pt>
 File: ./Figures/mod_open.JPG Graphic file (type jpg)
 <use ./Figures/mod_open.JPG>
 Package pdftex.def Info: ./Figures/mod_open.JPG  used on input line 410.
@@ -1369,7 +1370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-<./Figures/mod_closed.JPG, id=640, 1271.5505pt x 715.473pt>
+<./Figures/mod_closed.JPG, id=615, 1271.5505pt x 715.473pt>
 File: ./Figures/mod_closed.JPG Graphic file (type jpg)
 <use ./Figures/mod_closed.JPG>
 Package pdftex.def Info: ./Figures/mod_closed.JPG  used on input line 419.
@@ -1405,20 +1406,23 @@ as been already used, duplicate ignored
 l.35 \include{./zk_48_hardware.tex}
                                     <./Figures/raw_modules.jpeg> <./Figures/mod
 _open.JPG> <./Figures/mod_closed.JPG>]
-<./Figures/attiny861_pinout.jpg, id=655, 1055.945pt x 328.72812pt>
+
+LaTeX Warning: Reference `State Machine' on page 1 undefined on input line 42.
+
+<./Figures/attiny861_pinout.jpg, id=626, 1055.945pt x 328.72812pt>
 File: ./Figures/attiny861_pinout.jpg Graphic file (type jpg)
 <use ./Figures/attiny861_pinout.jpg>
-Package pdftex.def Info: ./Figures/attiny861_pinout.jpg  used on input line 54.
+Package pdftex.def Info: ./Figures/attiny861_pinout.jpg  used on input line 49.
 
 (pdftex.def)             Requested size: 369.88582pt x 115.14685pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 88.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 83.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 Package fancyhdr Warning: \footskip is too small (40.0pt): 
@@ -1433,43 +1437,80 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.88 
+l.83 
      
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.88 
+l.83 
       <./Figures/attiny861_pinout.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 92.
+nput line 88.
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
 
 (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 98.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 101.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
-
 
 Package fancyhdr Warning: \footskip is too small (40.0pt): 
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[22]
+[22] (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 103.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 121.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
-
 
 Package fancyhdr Warning: \footskip is too small (40.0pt): 
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
 [23]
+<./Figures/75hc595_timing.png, id=734, 627.84563pt x 525.46312pt>
+File: ./Figures/75hc595_timing.png Graphic file (type png)
+<use ./Figures/75hc595_timing.png>
+Package pdftex.def Info: ./Figures/75hc595_timing.png  used on input line 126.
+(pdftex.def)             Requested size: 227.62204pt x 190.49754pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 108.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 141.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1477,10 +1518,21 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[24]
+[24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.141 
+       <./Figures/75hc595_timing.png>]
+<./Figures/fsm.png, id=770, 564.1075pt x 564.1075pt>
+File: ./Figures/fsm.png Graphic file (type png)
+<use ./Figures/fsm.png>
+Package pdftex.def Info: ./Figures/fsm.png  used on input line 145.
+(pdftex.def)             Requested size: 426.79134pt x 426.79805pt.
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 115.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 153.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1488,10 +1540,16 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[25]
+[25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.153 
+       <./Figures/fsm.png>]
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 120.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 245.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1499,10 +1557,28 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[26]
+[26
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+      ]
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 125.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 265.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1511,20 +1587,9 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
 [27]
-File: ./Figures/zk_48_logo.png Graphic file (type png)
-<use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 131.
-(pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
+\openout2 = `./zk_48_appendix.aux'.
 
-
-Package fancyhdr Warning: \footskip is too small (40.0pt): 
-(fancyhdr)                Make it at least 48.04416pt, for example:
-(fancyhdr)                \setlength{\footskip}{48.04416pt}.
-
-[28]
-\openout2 = `./zk_48_complete.aux'.
-
- (zk_48_complete.tex
+ (zk_48_appendix.tex
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
 [][][][]$\T1/cmtt/m/n/8 https : / / feuerwerkershop . de / produkt / funkzuenda
 nlagen / sonstige-[]zuendanlagen /
@@ -1535,33 +1600,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-)
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 133.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 43.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
-
 
 Package fancyhdr Warning: \footskip is too small (40.0pt): 
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[29
+[28
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.133 \include{./zk_48_complete.tex}
-                                    ]
-\openout2 = `./zk_48_appendix.aux'.
-
- (zk_48_appendix.tex
-(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino
+l.43 
+     ] (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 60.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 61.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1569,14 +1628,21 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[30
-
-
-
-]
+[29]
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 121.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 122.
+(pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
+
+
+Package fancyhdr Warning: \footskip is too small (40.0pt): 
+(fancyhdr)                Make it at least 48.04416pt, for example:
+(fancyhdr)                \setlength{\footskip}{48.04416pt}.
+
+[30]
+File: ./Figures/zk_48_logo.png Graphic file (type png)
+<use ./Figures/zk_48_logo.png>
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 183.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1585,25 +1651,25 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
 [31]
+Overfull \hbox (6.00653pt too wide) in paragraph at lines 234--236
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 181.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 245.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
-
 
 Package fancyhdr Warning: \footskip is too small (40.0pt): 
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
 [32]
-Overfull \hbox (6.00653pt too wide) in paragraph at lines 233--235
-[][][][][][][][][][][][][][][][][][][] 
- []
-
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 242.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 305.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
+
 
 Package fancyhdr Warning: \footskip is too small (40.0pt): 
 (fancyhdr)                Make it at least 48.04416pt, for example:
@@ -1612,7 +1678,7 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 [33]
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 304.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 366.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1623,7 +1689,7 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 [34]
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 364.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 427.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1631,26 +1697,15 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[35]
-File: ./Figures/zk_48_logo.png Graphic file (type png)
-<use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 426.
-(pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
-
-
-Package fancyhdr Warning: \footskip is too small (40.0pt): 
-(fancyhdr)                Make it at least 48.04416pt, for example:
-(fancyhdr)                \setlength{\footskip}{48.04416pt}.
-
-[36])
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+[35])
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 )
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 135.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 269.
 (pdftex.def)             Requested size: 28.84653pt x 44.44412pt.
 
 
@@ -1658,57 +1713,61 @@ Package fancyhdr Warning: \footskip is too small (40.0pt):
 (fancyhdr)                Make it at least 48.04416pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.04416pt}.
 
-[37] (zk_48_documentation.aux (zk_48_introduction.aux) (zk_48_hardware.aux)
-(zk_48_complete.aux) (zk_48_appendix.aux))
+[36] (zk_48_documentation.aux (zk_48_introduction.aux) (zk_48_hardware.aux)
+(zk_48_appendix.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `zk_48_documentation.out' has not changed.
-(rerunfilecheck)             Checksum: A5D81F6A8A5A2FA608A5DF4767162E5E;8950.
+(rerunfilecheck)             Checksum: B7E1E43AFEAB37F0ADFDEF591069BF41;8176.
  ) 
 Here is how much of TeX's memory you used:
- 21269 strings out of 476331
- 406884 string characters out of 5786821
- 1928660 words of memory out of 5000000
- 40750 multiletter control sequences out of 15000+600000
- 531548 words of font info for 78 fonts, out of 8000000 for 9000
+ 21386 strings out of 476331
+ 409007 string characters out of 5786821
+ 1929660 words of memory out of 5000000
+ 40792 multiletter control sequences out of 15000+600000
+ 532324 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,15n,79p,1267b,2446s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 tt0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecit0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\tcrm0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\inimodo\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\inimodo\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\inimodo\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\in
-imodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\
-Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1000.
+pi600\ecbx0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecit0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\inimodo\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\inimodo\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\inimodo\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\in
+imodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\
+Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.
 pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1200.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecti1000.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm1000.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\inimodo\AppData\Local\MiK
-TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\inimodo\AppData\L
-ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\inimodo\A
-ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/in
-imodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi6.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/inimodo/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/inimodo/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/inimodo/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/ini
-modo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb>
-Output written on zk_48_documentation.pdf (38 pages, 26532389 bytes).
+cbi1000.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx1200.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecti1000.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\inimodo\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\inimodo\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\inimodo\AppData\L
+ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\inimodo\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\i
+nimodo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/
+Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/inimodo/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/inimodo/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/inimodo/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/inim
+odo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/U
+sers/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy9.pfb>
+Output written on zk_48_documentation.pdf (37 pages, 26619868 bytes).
 PDF statistics:
- 2115 PDF objects out of 2487 (max. 8388607)
- 624 named destinations out of 1000 (max. 500000)
- 662 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2211 PDF objects out of 2487 (max. 8388607)
+ 691 named destinations out of 1000 (max. 500000)
+ 632 words of extra memory for PDF output out of 10000 (max. 10000000)
 

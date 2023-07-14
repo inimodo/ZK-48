@@ -39,15 +39,10 @@
 
 \section{Firmware}
 \label{Firmware}
-The firmware running on the Attiny861, is a basic Moore state machine\footurl{https://en.wikipedia.org/wiki/Moore_machine} with eight states. Each state performs a essential function  with distinct sound and LED outputs showing the current state. More about the state machine in \Cref{State Machine}. In \Cref{Components of the Firmware} the firmware code gets broken down in each functional group and function as well as explained what its task is. The code was written in \textit{C++}(Arduino \textit{C++}) inside the Arduino IDE. Read more about the programming of the Attiny, it self, in \Cref{Programming the Attiny861}.
+The firmware, running on the Attiny861, contains a basic Moore state machine\footurl{https://en.wikipedia.org/wiki/Moore_machine} with eight states. Each state performs an essential function, with distinct sound and status LED outputs. More about the state machine in \Cref{State Machine}. The code was written in \textit{C++}(Arduino \textit{C++}) inside the Arduino IDE. Read more about the programming of the Attiny861 in \Cref{Programming the Attiny861}. Please note, in this section the code of the Attiny861 will be referred to as firmware or just code and the firing sequence, that controls the pyrotechnic show, gets called program.
 
-\subsection{Components of the Firmware}
-\label{Components of the Firmware}
 
-\subsubsection{Constants}
-The first section of code contains all necessary constants, as well as the including of the EEPROM.h\footurl{https://docs.arduino.cc/learn/built-in-libraries/eeprom} library needed for reading and writing to the internal EEPROM of the Attiny.
-
-\paragraph{Pinout}
+\subsection{Pinout}
 
 \begin{figure}[!ht]
     \centering
@@ -80,49 +75,187 @@ Pin & Name               & Type &Description \\ \hline \hline
 7   & RX                 & IN & Receive signal for serial TTL communication\\ \hline
 6   & TX                 & OUT & Transmit signal for serial TTL communication\\ \hline
 	\end{tabular}
-	\caption{Signal descriptions of all used pins on the Attiny861}
+	\caption{Signal descriptions of all pins used of the Attiny861}
 	\label{tab:pinio}
 \end{table}
 
 \pagebreak
 
-\paragraph{Module addressing}
-For addressing the modules inside code, a 2D byte array was used for controlling the two DMUX (See \Cref{Components of the Controller}) which enables simple addressing of the ignition modules by just a integer. 
+\subsection{Setup}
 
-\lstinputlisting[frame=l,captionpos=b,firstline=28,lastline=47,caption=Bit array for controlling the DMUX,label=lst:dmuxctrl]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+\noindent The pinout listed in \Cref{tab:pinio} gets configured inside the \textit{setup} function(See \Cref{lst:iosetting}) which gets called once on boot. Inside the same function call, the interrupt will be configured, to invoke a function called \textit{fire}, if the pin voltage level changes from low to high on pin 2.  Furthermore, the baud rate for the TTL serial communication is set to \textit{57600}. More about the serial communication in \Cref{Program Mode}.\\
 
-Line 2 till 5 in \Cref{lst:dmuxctrl} define a alias for indexing the correct collum in \textit{module_resolve} as shown in line 10.
+\lstinputlisting[frame=l,captionpos=b,firstline=110,lastline=126,caption=Code configuring the IO pins of the Attiny861. ,label=lst:iosetting]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
 
-\subsubsection{Setup}
-\paragraph{\textit{setup}}
+\noindent All ignition modules registers contents are cleared during \textit{setup}, by calling the \textit{transmitData}(See \Cref{Serial Data Transmission}) function with an out of range index(See \Cref{lst:cleardisable}). This sets all ignition modules internal shift registers to 0. This is done due safety reasons, to prevent accidental premature firing, as already stated in \Cref{Components of the Controller} "Arm safety circuit". For the same reason, the \textit{setModule} function(See \Cref{Ignition Module addressing}) is used to disable all ignition modules. The program endpoint is also read from the internal EEPROM(More about that in \Cref{Program Mode}).\\
+
+\lstinputlisting[frame=l,captionpos=b,firstline=128,lastline=130,caption=Code clearing and disabling ignition modules and reading the program endpoint. ,label=lst:cleardisable]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+\noindent The code snipped shown in \Cref{lst:clockdiv} is also contained in the setup function. Without the code in \Cref{lst:clockdiv} the firmware would execute at a eighth of normal speed. This means, a delay of $10ms$ takes $80ms$. This increase of the delay was measured, by programming the Attiny861 to output a $10ms$ pulse which got measured by a oscilloscope. The oscilloscope measured $80ms$ instead of $10ms$. Research led to a forum post where the code in \Cref{lst:clockdiv} was found and subsequently tested, which proved to be successful in restoring the correct timing.
+
+\lstinputlisting[frame=l,captionpos=b,firstline=104,lastline=107,caption=Code for removing the clock division factor.,label=lst:clockdiv]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+\sourceurl{ the Code in}{lst:clockdiv}{https://community.platformio.org/t/attiny-8mhz-wrong-timing\\-in-delay-fastled-and-neopixel/24992/3}
+
 \pagebreak
 
-\subsubsection{EEPROM Functions}
-\paragraph{\textit{writeProgramEndpoint} and \textit{readProgramEndpoint}}
-\paragraph{\textit{writeProgramPoint} and \textit{readProgramPoint}}
+\subsection{Ignition of a Port}
+
+\lstinputlisting[frame=l,captionpos=b,firstline=300,lastline=309,caption=Ignition function for setting of a bridge wire detonator given a port and ignition module,label=lst:ignitionfunc]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+
+\noindent The function \textit{ignite} shown in \Cref{lst:ignitionfunc} sets off a given a port and a ignition modules index. First, on line 3 in \Cref{lst:ignitionfunc} the port gets set on all ignition modules. Right after in line 4, the correct ignition modules gets selected thereby firing the port. After a delay called ignition time, all modules get unselected and the ignition module are cleared.\\
+
+\subsubsection{Ignition Module addressing}
+\label{Ignition Module addressing}
+
+\lstinputlisting[frame=l,captionpos=b,firstline=29,lastline=47,caption=Bit array for controlling the DMUX,label=lst:dmux_map]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+\noindent For addressing the modules from code, a 2D byte array is used for controlling the two DMUX (See \Cref{Components of the Controller}). This allows the ignition modules to be addressed by just a single integer value.  In \Cref{lst:dmux_map} the constant \textit{module\_resolve} contains a unique bit pattern, allowing for all ignition modules to be enabled, behaving like a lookup-table. Line 2 till 5 in \Cref{lst:dmux_map} define a alias for mapping the column in \textit{module\_resolve} (as shown in line 10) on the correct outputs \textit{TRIGADD\_A0}, \textit{TRIGADD\_A1}, \textit{TRIGADD\_E1}  and \textit{TRIGADD\_E2}. 
+
+\lstinputlisting[frame=l,captionpos=b,firstline=291,lastline=297,caption=Code selecting a module by its index,label=lst:dmux_controll]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+\noindent The function \textit{setModule} in \Cref{lst:dmux_controll} receives a byte, which represents the index of the ignition module, by which  the correct row in the \textit{module\_resolve} array gets indexed, to set the address and enable lines on the DMUX to enable the correct module.\\
+
 \pagebreak
 
-\subsubsection{Program Mode}
-\paragraph{\textit{checkPGM}}
-\paragraph{\textit{programmMode}}
+\subsubsection{Serial Data Transmission}
+\label{Serial Data Transmission}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=8cm]{./Figures/75hc595_timing.png}
+    \caption{Timing diagram of the 74HC595.}
+    \label{fig:74hc595_timing}     
+\end{figure}
+
+\sourceurl{}{fig:74hc595_timing}{https://cdn-reichelt.de/documents/datenblatt/A240/74HC595\%23STM.pdf}
+
+\noindent As explained in \Cref{Ignition Module work} "Controlling the Ignition Circuits" the ignition modules get the information, about what port to fire, over a serial data transmission. The timing diagram in \Cref{fig:74hc595_timing} shows how a bit gets shifted though the shift register and outputted on the outputs. This is also the same working principle of the port setting process. However when firing a port, the enable pin(Pin \textit{G} in \Cref{fig:74hc595_timing}) of the tri-sate buffer is turned off during the transmission  and only gets enabled for $10ms$ afterwards, to fire the set port (Please read \Cref{Ignition Module work}).\\
+
+\lstinputlisting[frame=l,captionpos=b,firstline=271,lastline=288,caption=Function for transmitting the port to the ignition modules,label=lst:transmit_data]{../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino}
+
+\noindent Function \textit{transmitData} displayed \Cref{lst:transmit_data} sets the port on all ignition modules. Line 12 till 15 are creating a nine impulse clock signal with a $5 \mu s$ ontime. The reason for nine impulse instead of eight can be explained by viewong \Cref{fig:74hc595_timing}. In this timing diagram the shift register clock \textit{SCK} and the register clock \textit{RCK} are 180 Degrees phase shifted, thus an additional impulse is needed. Lines 6 till 10 in \Cref{lst:transmit_data} are setting the data line to high, when the set port is equal to the port index.
+
+
 \pagebreak
 
-\subsubsection{IO Function}
-\paragraph{\textit{transmitData}}
-\paragraph{\textit{setModule}}
-\paragraph{\textit{ignite}}
-\paragraph{\textit{setLEDState}}
+\subsection{State Machine}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=15cm]{./Figures/fsm.png}
+    \caption{State diagram of the realised state machine.}
+    \label{fig:state_machine}     
+\end{figure}
+
+\noindent The firmware starts at INIT and immediately enters NO\_TRIGGER. If no trigger is connected to the controller the system stays in NO\_TRIGGER until the program mode gets called over USB or a trigger is connected. In state IDLE the systems waits for both arm switches to be armed. If both are armed the sytem transitions into ARMED. When in state ARMED the system waits until it receives a fire signal from the trigger, therefore transitioning to state WAIT. In WAIT the system stays for $10s$ then transitions to state FIRE thus playing through the firing sequence as programmed in EEPROM until it reaches its end therefore entering state END. If during state FIRE, WAIT or ARMED the controller or the trigger gets unarmed the system returns to state IDLE. This state machine is depicted by \Cref{fig:state_machine} together with the transition conditions in \Cref{lst:transcond} and the LED and buzzer output for each state in \Cref{lst:io_out}.
+
 \pagebreak
 
-\subsubsection{State Machine}
-\label{State Machine}
-\paragraph{\textit{FSM}}
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|} 
+\hline
+State       &Green&Red&Buzzer&Delay                           \\ 
+\hline\hline
+PG\_MODE    &1&1&0& -                               \\ 
+\hline
+INIT (3x)   &1&1&1& 100ms                           \\
+            &0 &0&0& 100ms                           \\ 
+\hline
+NO\_TRIGGER &1&0&0& 250ms                           \\
+            &0&1&0& 250ms                           \\ 
+\hline
+IDLE        &1&0&0& 100ms                           \\
+            &0&0&0& 500ms                           \\ 
+\hline
+ARMED       &0&1&0& 100ms                           \\
+            &0&0&0& 500ms                           \\ 
+\hline
+WAIT        &0&1&1& 50ms                            \\
+            &0&0&0& 50ms                            \\ 
+\hline
+FIRE        &0&1&1& \{IGNITION\_TIME\}ms            \\
+            &1&0&0& \{PROGRAM[PG\_INDEX].DELAY\}ms  \\ 
+\hline
+END         &0&1&0& -                           \\
+\hline
+\end{tabular}
+\caption{Truth table for state depended LED and buzzer output with timing information.}
+\label{lst:io_out}
+\end{table}
+
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|} 
+\hline
+Nr & PG & TF & TA & TC & CA & WT & DN  \\ 
+\hline \hline
+1  & 1  & X  & X  & X  & X  & X  & X   \\ 
+\hline
+2  & X  & X  & X  & 0  & X  & X  & X   \\ 
+\hline
+3  & X  & X  & 0  & 1  & 0  & X  & X   \\ 
+\hline
+4  & X  & X  & 1  & 1  & 1  & X  & X   \\ 
+\hline
+5  & X  & X  & 0  & X  & X  & X  & X   \\ 
+\hline
+5  & X  & X  & X  & X  & 0  & X  & X   \\ 
+\hline
+6  & X  & 1  & 1  & 1  & 1  & 1  & X   \\ 
+\hline
+7  & X  & X  & 1  & 1  & 1  & 0  & X   \\ 
+\hline
+8  & X  & X  & X  & X  & X  & X  & 1   \\
+\hline
+\end{tabular}
+\caption{Truth table for transition condition based on state variables. ("X" = Don't care)}
+\label{lst:transcond}
+\end{table}
+
+\subsubsection{State Variables}
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|l|l|l|} 
+\hline
+State Variable    & SV & Condition                                   \\ 
+\hline \hline
+Program Mode      & PG & checkPGM()                                  \\ 
+\hline
+Trigger Fire      & TF & fire\_pulse\_counter = FIRE\_PULSE\_SETOFF  \\ 
+\hline
+Done              & DN & pg\_index == pg\_stop                       \\ 
+\hline
+Wait              & WT & wait\_counter = FIRE\_DELAY                 \\ 
+\hline
+Trigger Armed     & TA & digitalRead(TRIGGER\_ARMED)                 \\ 
+\hline
+Trigger Connected & TC & digitalRead(TRIGGER\_CONNECTED)             \\ 
+\hline
+Controller Armed  & CA & digitalRead(THIS\_ARMED)                    \\
+\hline
+\end{tabular}	
+\caption{List of all state variables and their conditions}
+\label{tab:state_vars_list}
+\end{table}
+
 \pagebreak
 
-\subsubsection{Main Loop}
-\paragraph{\textit{loop}}
-\paragraph{\textit{fire}}
-\pagebreak
+\subsubsection{States}
+\paragraph{\textit{PG\_MODE}}
+\paragraph{\textit{INIT}}
+\paragraph{\textit{NO\_TRIGGER}}
+\paragraph{\textit{ARMED}}
+\paragraph{\textit{WAIT}}
+\paragraph{\textit{FIRE}}
+\subsection{Program Mode}
+\label{Program Mode}
+\subsubsection{Entering the Program Mode}
+\subsubsection{Instruction Set}
+\subsubsection{Instruction Decoding}
+
 
 \subsection{Programming the Attiny861}
 \label{Programming the Attiny861}
@@ -131,7 +264,7 @@ Line 2 till 5 in \Cref{lst:dmuxctrl} define a alias for indexing the correct col
 \pagebreak
 
 
-\include{./zk_48_complete.tex}
+%\include{./zk_48_complete.tex}
 
 \include{./zk_48_appendix.tex}
 

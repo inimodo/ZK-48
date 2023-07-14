@@ -81,6 +81,7 @@ short fire_pulse_counter = 0;
 
 #define BAUDRATE 57600
 
+#define STATE_END 8
 #define STATE_WAIT 7
 #define STATE_FIRE 6
 #define STATE_ARMED 5
@@ -94,7 +95,7 @@ byte wait_counter;
 
 // ################# // Setup // ################# //
 
-void setup() {
+void setup() { //
 
   // this is not my code!
   // source: https://community.platformio.org/t/
@@ -107,7 +108,9 @@ void setup() {
   // end
   
   Serial.begin(BAUDRATE);
-
+  
+  attachInterrupt(digitalPinToInterrupt(TRIGGER_FIRE),fire,RISING);
+  
   pinMode(MODUL_DATA,OUTPUT);
   pinMode(MODUL_CLK,OUTPUT);
   pinMode(TRIGADD_A0,OUTPUT);
@@ -117,7 +120,6 @@ void setup() {
   pinMode(STATUS_PIEP,OUTPUT);
   pinMode(STATUS_RED,OUTPUT);
   pinMode(STATUS_GREEN,OUTPUT); 
-  
   pinMode(TRIGGER_FIRE,INPUT);
   pinMode(TRIGGER_ARMED,INPUT);
   pinMode(TRIGGER_CONNECTED,INPUT);
@@ -127,7 +129,6 @@ void setup() {
   setModule(ALL_OFF);
   pg_stop = readProgramEndpoint();
     
-  attachInterrupt(digitalPinToInterrupt(TRIGGER_FIRE),fire,RISING);
 }
 
 // ################# // EEPROM Functions // ################# //
@@ -267,7 +268,7 @@ byte programmMode()
 // ################# // IO Functions // ################# //
 
 // sets the port on ALL modules
-void transmitData(byte port)
+void transmitData(byte port) //
 {
   
   for(byte port_index = 0; port_index < 9; port_index ++ )
@@ -287,7 +288,7 @@ void transmitData(byte port)
 }
 
 // selects what module is meant to ignite the set Port
-void setModule(byte module)
+void setModule(byte module) //
 {
   digitalWrite(TRIGADD_A0,module_resolve[module][nA0]);
   digitalWrite(TRIGADD_A1,module_resolve[module][nA1]);
@@ -296,7 +297,7 @@ void setModule(byte module)
 }
 
 // ignites a port on a given module
-void ignite(byte module, byte port)
+void ignite(byte module, byte port) //
 {
   transmitData(port);
   setModule(module+1); // +1 because 0 (ALL_OFF) is turning off all modules
@@ -321,10 +322,12 @@ void setLEDState(byte G,byte R,byte P)
 byte FSM(byte state)
 {
   byte PG = checkPGM();
-  byte ZD = digitalRead(TRIGGER_FIRE);
-  byte ZA = digitalRead(TRIGGER_ARMED);
-  byte ZC = digitalRead(TRIGGER_CONNECTED);
-  byte TA = digitalRead(THIS_ARMED);
+  byte TF = fire_pulse_counter >= FIRE_PULSE_SETOFF;
+  byte DN = pg_index == pg_stop;
+  byte WT = wait_counter < FIRE_DELAY;
+  byte TA = digitalRead(TRIGGER_ARMED);
+  byte TC = digitalRead(TRIGGER_CONNECTED);
+  byte CA = digitalRead(THIS_ARMED);
 
   byte new_state = state;
 
@@ -337,11 +340,11 @@ byte FSM(byte state)
       {
         programmMode();
       }
-      
       break;
+      
     case STATE_INIT:
       if(PG == 0)new_state = STATE_NO_TRIGGER;
-      else if(ZA == 0 && ZC == 1 && TA == 0)new_state = STATE_IDLE;
+      else if(CA == 0 && TC == 1 && TA == 0)new_state = STATE_IDLE;
             
       for(int i = 0;i<3;i++){
         setLEDState(HIGH,HIGH,HIGH);
@@ -351,19 +354,21 @@ byte FSM(byte state)
       }
       
       break;
+      
     case STATE_NO_TRIGGER:
       if(PG == 1)new_state = STATE_PG_MODE;
-      else if(ZA == 0 && ZC == 1 && TA == 0)new_state = STATE_IDLE;
+      else if(CA == 0 && TC == 1 && TA == 0)new_state = STATE_IDLE;
       
       setLEDState(HIGH,LOW,LOW);
       delay(250);
       setLEDState(LOW,HIGH,LOW); 
       delay(250);      
       break;
+      
     case STATE_IDLE:
       if(PG == 1)new_state = STATE_PG_MODE;
-      else if(ZC == 0) new_state = STATE_NO_TRIGGER;
-      else if(ZA == 1 && TA == 1) new_state = STATE_ARMED;
+      else if(TC == 0) new_state = STATE_NO_TRIGGER;
+      else if(CA == 1 && TA == 1) new_state = STATE_ARMED;
 
       wait_counter = 0;
       
@@ -372,22 +377,24 @@ byte FSM(byte state)
       setLEDState(LOW,LOW,LOW);
       delay(500);
       break;
-    case STATE_ARMED:        
-      if(ZA == 0)new_state = STATE_IDLE;
-      else if(TA == 0)new_state = STATE_IDLE;
-
+    case STATE_ARMED: 
+           
+      if(TA == 0)new_state = STATE_IDLE;
+      else if(CA == 0)new_state = STATE_IDLE;
+      if(TF == 1)new_state = STATE_WAIT;
+      fire_pulse_counter = 0;
+      
       setLEDState(LOW,HIGH,HIGH);
       delay(100);
       setLEDState(LOW,LOW,LOW);
       delay(500); 
 
-      if(fire_pulse_counter >= FIRE_PULSE_SETOFF)new_state = STATE_WAIT;
-      
       break;
+      
     case STATE_WAIT:
-      if(ZA == 0)new_state = STATE_IDLE;
+      if(TA == 0)new_state = STATE_IDLE;
       else if(TA == 0)new_state = STATE_IDLE;
-      else if (wait_counter > FIRE_DELAY) new_state = STATE_FIRE;
+      else if (WT == 0) new_state = STATE_FIRE;
 
       wait_counter++;
       
@@ -396,25 +403,26 @@ byte FSM(byte state)
       setLEDState(LOW,LOW,LOW);
       delay(50);
       break;
+      
     case STATE_FIRE:
-      if(ZA == 0)new_state = STATE_IDLE;
+      if(TA == 0)new_state = STATE_IDLE;
       else if(TA == 0)new_state = STATE_IDLE;
-
+      else if(DN == 1) new_state = STATE_END;
+      
       section pgpoint = readProgramPoint(pg_index);
       
       setLEDState(HIGH,LOW,LOW);
       delay(pgpoint.msdelay);
       setLEDState(LOW,HIGH,HIGH);
-      ignite(pgpoint.module,pgpoint.port);
+      ignite(pgpoint.module,pgpoint.port); 
       
-      if(pg_index == pg_stop)
-      {   
-        while(1){//END    
-          setLEDState(LOW,HIGH,LOW);
-        }
-      }
-      pg_index++;
+      pg_index++;  
       break;
+  
+    case STATE_END:
+      setLEDState(LOW,HIGH,LOW);
+      break;
+      
   }
   return new_state;
 }
@@ -422,10 +430,7 @@ byte FSM(byte state)
 // ################# // Main Loop // ################# //
 
 void loop() {
-
   state = FSM(state);
-  
-  fire_pulse_counter = 0;
 }
 
 void fire()
