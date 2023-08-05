@@ -70,9 +70,11 @@ const char* cmd_pgm = "pgm";
 
 // threshold for the number of impules before starting the wait sequence
 #define FIRE_PULSE_SETOFF 1000
+short fire_pulse_counter = 0;
 // delay before ignition of the program
 #define FIRE_DELAY 100 // 1 = 100ms 100 = 10s
-short fire_pulse_counter = 0;
+byte wait_counter;
+
 
 // time each ignition pulse takes - depends on e-igniter
 #define IGNITION_TIME 10 // ms
@@ -91,11 +93,11 @@ short fire_pulse_counter = 0;
 #define STATE_PG_MODE 1
 
 byte state = STATE_INIT;
-byte wait_counter;
 
 // ################# // Setup // ################# //
 
-void setup() { //
+void setup() 
+{ //
 
   // this is not my code!
   // source: https://community.platformio.org/t/
@@ -166,20 +168,8 @@ char checkPGM()
   if (Serial.available() > 0) 
   {
     String str_buffer = Serial.readString();    
-    char split_index[PGM_MAXARGS];
-    split_index[0] = str_buffer.indexOf(PGM_START_CHAR);
-    for(int index=1; index < PGM_MAXARGS; index++)
-    {
-      split_index[index] = str_buffer.indexOf(
-        PGM_ARG_CHAR,
-        split_index[index-1]+1);
-    }
-    
-    str_buffer = str_buffer.substring(
-      split_index[0]+1,
-      split_index[1]);
-      
-    if(str_buffer.compareTo("pgm")==0)
+
+    if(str_buffer.compareTo("#pgm:")==0)
     {
       return true;
     }
@@ -324,7 +314,7 @@ byte FSM(byte state)
   byte PG = checkPGM();
   byte TF = fire_pulse_counter >= FIRE_PULSE_SETOFF;
   byte DN = pg_index == pg_stop;
-  byte WT = wait_counter < FIRE_DELAY;
+  byte WT = wait_counter <= FIRE_DELAY;
   byte TA = digitalRead(TRIGGER_ARMED);
   byte TC = digitalRead(TRIGGER_CONNECTED);
   byte CA = digitalRead(THIS_ARMED);
@@ -377,8 +367,8 @@ byte FSM(byte state)
       setLEDState(LOW,LOW,LOW);
       delay(500);
       break;
-    case STATE_ARMED: 
-           
+      
+    case STATE_ARMED:          
       if(TA == 0)new_state = STATE_IDLE;
       else if(CA == 0)new_state = STATE_IDLE;
       if(TF == 1)new_state = STATE_WAIT;
@@ -429,7 +419,8 @@ byte FSM(byte state)
 
 // ################# // Main Loop // ################# //
 
-void loop() {
+void loop() 
+{
   state = FSM(state);
 }
 

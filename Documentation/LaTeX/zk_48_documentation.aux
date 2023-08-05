@@ -29,6 +29,8 @@
 \newlabel{tab:pinio}{{1}{21}{Signal descriptions of all pins used of the Attiny861}{table.1}{}}
 \newlabel{tab:pinio@cref}{{[table][1][]1}{[1][21][]21}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Setup}{22}{subsection.3.2}\protected@file@percent }
+\newlabel{FSetup}{{3.2}{22}{Setup}{subsection.3.2}{}}
+\newlabel{FSetup@cref}{{[subsection][2][3]3.2}{[1][22][]22}}
 \newlabel{lst:iosetting}{{1}{22}{Code configuring the IO pins of the Attiny861}{lstlisting.1}{}}
 \newlabel{lst:iosetting@cref}{{[lstlisting][1][]1}{[1][22][]22}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Code configuring the IO pins of the Attiny861.}{22}{lstlisting.1}\protected@file@percent }
@@ -74,21 +76,38 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces List of all state variables and their conditions}}{26}{table.4}\protected@file@percent }
 \newlabel{tab:state_vars_list}{{4}{26}{List of all state variables and their conditions}{table.4}{}}
 \newlabel{tab:state_vars_list@cref}{{[table][4][]4}{[1][26][]26}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}States}{27}{subsubsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.1}\textit  {PG\_MODE}}{27}{paragraph.3.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.2}\textit  {INIT}}{27}{paragraph.3.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.3}\textit  {NO\_TRIGGER}}{27}{paragraph.3.4.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.4}\textit  {ARMED}}{27}{paragraph.3.4.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.5}\textit  {WAIT}}{27}{paragraph.3.4.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.6}\textit  {FIRE}}{27}{paragraph.3.4.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Program Mode}{27}{subsection.3.5}\protected@file@percent }
-\newlabel{Program Mode}{{3.5}{27}{Program Mode}{subsection.3.5}{}}
-\newlabel{Program Mode@cref}{{[subsection][5][3]3.5}{[1][27][]27}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Entering the Program Mode}{27}{subsubsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}Instruction Set}{27}{subsubsection.3.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}Instruction Decoding}{27}{subsubsection.3.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Programming the Attiny861}{27}{subsection.3.6}\protected@file@percent }
-\newlabel{Programming the Attiny861}{{3.6}{27}{Programming the Attiny861}{subsection.3.6}{}}
-\newlabel{Programming the Attiny861@cref}{{[subsection][6][3]3.6}{[1][27][]27}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.1}PG (Program Mode)}{27}{paragraph.3.4.1.1}\protected@file@percent }
+\newlabel{lst:check_pgm}{{8}{27}{Checking if the keyword for entering the program mode is entered}{lstlisting.8}{}}
+\newlabel{lst:check_pgm@cref}{{[lstlisting][8][]8}{[1][27][]27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {8}Checking if the keyword for entering the program mode is entered.}{27}{lstlisting.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.2}TF (Trigger Fire)}{27}{paragraph.3.4.1.2}\protected@file@percent }
+\newlabel{lst:interrupt}{{9}{27}{Interrupt function for handling the fire signal}{lstlisting.9}{}}
+\newlabel{lst:interrupt@cref}{{[lstlisting][9][]9}{[1][27][]27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}Interrupt function for handling the fire signal.}{27}{lstlisting.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.3}DN (Done)}{27}{paragraph.3.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.4}WT (Wait)}{27}{paragraph.3.4.1.4}\protected@file@percent }
+\newlabel{lst:interrupt}{{10}{27}{Definition of \textit {wait\_counter} and the }{lstlisting.10}{}}
+\newlabel{lst:interrupt@cref}{{[lstlisting][10][]10}{[1][27][]27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {10}Definition of \textit  {wait\_counter} and the .}{27}{lstlisting.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}States}{28}{subsubsection.3.4.2}\protected@file@percent }
+\newlabel{States}{{3.4.2}{28}{States}{subsubsection.3.4.2}{}}
+\newlabel{States@cref}{{[subsubsection][2][3,4]3.4.2}{[1][28][]28}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.1}\textit  {PG\_MODE}}{28}{paragraph.3.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.2}\textit  {INIT}}{28}{paragraph.3.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.3}\textit  {NO\_TRIGGER}}{28}{paragraph.3.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.4}\textit  {ARMED}}{28}{paragraph.3.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.5}\textit  {WAIT}}{28}{paragraph.3.4.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.6}\textit  {FIRE}}{28}{paragraph.3.4.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Program Mode}{28}{subsection.3.5}\protected@file@percent }
+\newlabel{Program Mode}{{3.5}{28}{Program Mode}{subsection.3.5}{}}
+\newlabel{Program Mode@cref}{{[subsection][5][3]3.5}{[1][28][]28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Entering the Program Mode}{28}{subsubsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}Instruction Set}{28}{subsubsection.3.5.2}\protected@file@percent }
+\newlabel{Instruction Set}{{3.5.2}{28}{Instruction Set}{subsubsection.3.5.2}{}}
+\newlabel{Instruction Set@cref}{{[subsubsection][2][3,5]3.5.2}{[1][28][]28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}Instruction Decoding}{28}{subsubsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Programming the Attiny861}{28}{subsection.3.6}\protected@file@percent }
+\newlabel{Programming the Attiny861}{{3.6}{28}{Programming the Attiny861}{subsection.3.6}{}}
+\newlabel{Programming the Attiny861@cref}{{[subsection][6][3]3.6}{[1][28][]28}}
 \@input{./zk_48_appendix.aux}
-\gdef \@abspage@last{37}
+\gdef \@abspage@last{38}

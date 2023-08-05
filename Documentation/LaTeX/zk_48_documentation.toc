@@ -39,20 +39,24 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Serial Data Transmission}{24}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}State Machine}{25}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}State Variables}{26}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}States}{27}{subsubsection.3.4.2}%
-\contentsline {paragraph}{\numberline {3.4.2.1}\textit {PG\_MODE}}{27}{paragraph.3.4.2.1}%
-\contentsline {paragraph}{\numberline {3.4.2.2}\textit {INIT}}{27}{paragraph.3.4.2.2}%
-\contentsline {paragraph}{\numberline {3.4.2.3}\textit {NO\_TRIGGER}}{27}{paragraph.3.4.2.3}%
-\contentsline {paragraph}{\numberline {3.4.2.4}\textit {ARMED}}{27}{paragraph.3.4.2.4}%
-\contentsline {paragraph}{\numberline {3.4.2.5}\textit {WAIT}}{27}{paragraph.3.4.2.5}%
-\contentsline {paragraph}{\numberline {3.4.2.6}\textit {FIRE}}{27}{paragraph.3.4.2.6}%
-\contentsline {subsection}{\numberline {3.5}Program Mode}{27}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Entering the Program Mode}{27}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Instruction Set}{27}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Instruction Decoding}{27}{subsubsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.6}Programming the Attiny861}{27}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Appendix}{28}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Pricing}{28}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Conclusion}{28}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Firmware Code}{29}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Recognitions}{36}{subsection.4.4}%
+\contentsline {paragraph}{\numberline {3.4.1.1}PG (Program Mode)}{27}{paragraph.3.4.1.1}%
+\contentsline {paragraph}{\numberline {3.4.1.2}TF (Trigger Fire)}{27}{paragraph.3.4.1.2}%
+\contentsline {paragraph}{\numberline {3.4.1.3}DN (Done)}{27}{paragraph.3.4.1.3}%
+\contentsline {paragraph}{\numberline {3.4.1.4}WT (Wait)}{27}{paragraph.3.4.1.4}%
+\contentsline {subsubsection}{\numberline {3.4.2}States}{28}{subsubsection.3.4.2}%
+\contentsline {paragraph}{\numberline {3.4.2.1}\textit {PG\_MODE}}{28}{paragraph.3.4.2.1}%
+\contentsline {paragraph}{\numberline {3.4.2.2}\textit {INIT}}{28}{paragraph.3.4.2.2}%
+\contentsline {paragraph}{\numberline {3.4.2.3}\textit {NO\_TRIGGER}}{28}{paragraph.3.4.2.3}%
+\contentsline {paragraph}{\numberline {3.4.2.4}\textit {ARMED}}{28}{paragraph.3.4.2.4}%
+\contentsline {paragraph}{\numberline {3.4.2.5}\textit {WAIT}}{28}{paragraph.3.4.2.5}%
+\contentsline {paragraph}{\numberline {3.4.2.6}\textit {FIRE}}{28}{paragraph.3.4.2.6}%
+\contentsline {subsection}{\numberline {3.5}Program Mode}{28}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Entering the Program Mode}{28}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Instruction Set}{28}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Instruction Decoding}{28}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Programming the Attiny861}{28}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Appendix}{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Pricing}{29}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Conclusion}{29}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Firmware Code}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Recognitions}{37}{subsection.4.4}%
