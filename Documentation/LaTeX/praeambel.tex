@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
-\geometry{a4paper, portrait, margin=30mm, headsep= 32pt , headheight = 19pt, footskip = 40 pt}
+\geometry{a4paper, portrait, margin=20mm, headsep= 15pt , headheight = 19pt, footskip = 15 pt}
 \usepackage[]{placeins}
 \usepackage{hyperref}
 
@@ -22,7 +22,7 @@
 \fancyhead[L]{\Large ZK-48}
 \fancyhead[C]{\Large Technical Documentation}
 \fancyhead[R]{\Large Page \thepage}
-\cfoot{\includegraphics[scale=0.06]{./Figures/zk_48_logo.png}}
+\cfoot{\includegraphics[scale=0.04]{./Figures/zk_48_logo.png}}
 
 \setlength{\footskip}{40pt}
 
@@ -64,13 +64,13 @@
             {\normalfont\normalsize\bfseries}}
 \makeatother
 \setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
-\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+\setcounter{tocdepth}{3}    % 4 means also paragraphs
 \crefname{paragraph}{paragraph}{paragraphs}
 \Crefname{paragraph}{Paragraph}{Paragraphs}
 
 % My commands :)
 
-\newcommand{\sourceurl}[3]{\noindent \textit{\small{Source of #1 \Cref{#2}: \url{#3}}}\\}
+\newcommand{\sourceurl}[3]{\noindent \textit{\small{Source of #1 \cref{#2}: \url{#3}}}\\}
 
 \newcommand{\footurl}[1]{\footnote{\url{#1}}}
 

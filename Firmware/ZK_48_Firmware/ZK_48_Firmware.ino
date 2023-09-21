@@ -187,14 +187,14 @@ byte programmMode()
 
     char split_index[PGM_MAXARGS];
     split_index[0] = str_buffer.indexOf(PGM_START_CHAR);
-    for(int index=1; index<PGM_MAXARGS; index++)
+    for(int index = 1; index < PGM_MAXARGS; index++)
     {
       split_index[index] = str_buffer.indexOf(
         PGM_ARG_CHAR,
         split_index[index-1]+1);
     }
     
-    String cmd = str_buffer.substring(split_index[0]+1,split_index[1]);
+    String cmd = str_buffer.substring(split_index[0]+1, split_index[1]);
 
     if(cmd == cmd_list)
     {
@@ -204,7 +204,7 @@ byte programmMode()
       Serial.print(pg_stop);
       Serial.println(PGM_ARG_CHAR);
 
-      for(int index=0;index<PG_LENGTH;index++)
+      for(int index=0; index < PG_LENGTH; index++)
       {
         section pgpoint = readProgramPoint(index);
         Serial.print(PGM_ANS_CHAR);
@@ -372,13 +372,13 @@ byte FSM(byte state)
       if(TA == 0)new_state = STATE_IDLE;
       else if(CA == 0)new_state = STATE_IDLE;
       if(TF == 1)new_state = STATE_WAIT;
+      
       fire_pulse_counter = 0;
       
       setLEDState(LOW,HIGH,HIGH);
       delay(100);
       setLEDState(LOW,LOW,LOW);
       delay(500); 
-
       break;
       
     case STATE_WAIT:

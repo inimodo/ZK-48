@@ -3,32 +3,163 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Firmware}{20}{section.3}\protected@file@percent }
 \newlabel{Firmware}{{3}{20}{Firmware}{section.3}{}}
 \newlabel{Firmware@cref}{{[section][3][]3}{[1][20][]20}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.1}USB Connection}{20}{subsubsection.3.0.1}\protected@file@percent }
-\newlabel{USB Connection}{{3.0.1}{20}{USB Connection}{subsubsection.3.0.1}{}}
-\newlabel{USB Connection@cref}{{[subsubsection][1][3,0]3.0.1}{[1][20][]20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Pinout}{20}{subsection.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Pinout of the Attiny861 µC.}}{20}{figure.26}\protected@file@percent }
+\newlabel{fig:attiny861_pinout}{{26}{20}{Pinout of the Attiny861 µC}{figure.26}{}}
+\newlabel{fig:attiny861_pinout@cref}{{[figure][26][]26}{[1][20][]20}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Signal descriptions of all pins used of the Attiny861}}{20}{table.1}\protected@file@percent }
+\newlabel{tab:pinio}{{1}{20}{Signal descriptions of all pins used of the Attiny861}{table.1}{}}
+\newlabel{tab:pinio@cref}{{[table][1][]1}{[1][20][]20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Setup}{21}{subsection.3.2}\protected@file@percent }
+\newlabel{FSetup}{{3.2}{21}{Setup}{subsection.3.2}{}}
+\newlabel{FSetup@cref}{{[subsection][2][3]3.2}{[1][21][]21}}
+\newlabel{lst:iosetting}{{1}{21}{Code configuring the IO pins of the Attiny861}{lstlisting.1}{}}
+\newlabel{lst:iosetting@cref}{{[lstlisting][1][]1}{[1][21][]21}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Code configuring the IO pins of the Attiny861.}{21}{lstlisting.1}\protected@file@percent }
+\newlabel{lst:cleardisable}{{2}{21}{Code clearing and disabling ignition modules and reading the program endpoint}{lstlisting.2}{}}
+\newlabel{lst:cleardisable@cref}{{[lstlisting][2][]2}{[1][21][]21}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Code clearing and disabling ignition modules and reading the program endpoint.}{21}{lstlisting.2}\protected@file@percent }
+\newlabel{lst:clockdiv}{{3}{21}{Code for removing the clock division factor}{lstlisting.3}{}}
+\newlabel{lst:clockdiv@cref}{{[lstlisting][3][]3}{[1][21][]21}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Code for removing the clock division factor.}{21}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Ignition of a Port}{22}{subsection.3.3}\protected@file@percent }
+\newlabel{lst:ignitionfunc}{{4}{22}{Ignition function for setting of a bridge wire detonator given a port index and ignition module}{lstlisting.4}{}}
+\newlabel{lst:ignitionfunc@cref}{{[lstlisting][4][]4}{[1][22][]22}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Ignition function for setting of a bridge wire detonator given a port index and ignition module}{22}{lstlisting.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Ignition Module addressing}{22}{subsubsection.3.3.1}\protected@file@percent }
+\newlabel{Ignition Module addressing}{{3.3.1}{22}{Ignition Module addressing}{subsubsection.3.3.1}{}}
+\newlabel{Ignition Module addressing@cref}{{[subsubsection][1][3,3]3.3.1}{[1][22][]22}}
+\newlabel{lst:dmux_map}{{5}{22}{Bit array for controlling the DMUX}{lstlisting.5}{}}
+\newlabel{lst:dmux_map@cref}{{[lstlisting][5][]5}{[1][22][]22}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Bit array for controlling the DMUX}{22}{lstlisting.5}\protected@file@percent }
+\newlabel{lst:dmux_controll}{{6}{22}{Code selecting a module by its index}{lstlisting.6}{}}
+\newlabel{lst:dmux_controll@cref}{{[lstlisting][6][]6}{[1][22][]22}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}Code selecting a module by its index}{22}{lstlisting.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Serial Data Transmission}{23}{subsubsection.3.3.2}\protected@file@percent }
+\newlabel{Serial Data Transmission}{{3.3.2}{23}{Serial Data Transmission}{subsubsection.3.3.2}{}}
+\newlabel{Serial Data Transmission@cref}{{[subsubsection][2][3,3]3.3.2}{[1][23][]23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Timing diagram of the 74HC595.}}{23}{figure.27}\protected@file@percent }
+\newlabel{fig:74hc595_timing}{{27}{23}{Timing diagram of the 74HC595}{figure.27}{}}
+\newlabel{fig:74hc595_timing@cref}{{[figure][27][]27}{[1][23][]23}}
+\newlabel{lst:transmit_data}{{7}{23}{Function for transmitting the port to the ignition modules}{lstlisting.7}{}}
+\newlabel{lst:transmit_data@cref}{{[lstlisting][7][]7}{[1][23][]23}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}Function for transmitting the port to the ignition modules}{23}{lstlisting.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}State Machine}{24}{subsection.3.4}\protected@file@percent }
+\newlabel{State Machine}{{3.4}{24}{State Machine}{subsection.3.4}{}}
+\newlabel{State Machine@cref}{{[subsection][4][3]3.4}{[1][24][]24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces State diagram of the realised state machine.}}{24}{figure.28}\protected@file@percent }
+\newlabel{fig:state_machine}{{28}{24}{State diagram of the realised state machine}{figure.28}{}}
+\newlabel{fig:state_machine@cref}{{[figure][28][]28}{[1][24][]24}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Truth table for the state depended LED and buzzer outputs with timing information.}}{25}{table.2}\protected@file@percent }
+\newlabel{lst:io_out}{{2}{25}{Truth table for the state depended LED and buzzer outputs with timing information}{table.2}{}}
+\newlabel{lst:io_out@cref}{{[table][2][]2}{[1][25][]25}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Truth table for the transition condition based on the state variables. ("X" = Don't care)}}{25}{table.3}\protected@file@percent }
+\newlabel{lst:transcond}{{3}{25}{Truth table for the transition condition based on the state variables. ("X" = Don't care)}{table.3}{}}
+\newlabel{lst:transcond@cref}{{[table][3][]3}{[1][25][]25}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}State Variables}{25}{subsubsection.3.4.1}\protected@file@percent }
+\newlabel{State Variables}{{3.4.1}{25}{State Variables}{subsubsection.3.4.1}{}}
+\newlabel{State Variables@cref}{{[subsubsection][1][3,4]3.4.1}{[1][25][]25}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces List of all state variables and their conditions}}{25}{table.4}\protected@file@percent }
+\newlabel{tab:state_vars_list}{{4}{25}{List of all state variables and their conditions}{table.4}{}}
+\newlabel{tab:state_vars_list@cref}{{[table][4][]4}{[1][25][]25}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.1}PG (Program Mode)}{26}{paragraph.3.4.1.1}\protected@file@percent }
+\newlabel{lst:check_pgm}{{8}{26}{Checking if the keyword for entering the program mode is received}{lstlisting.8}{}}
+\newlabel{lst:check_pgm@cref}{{[lstlisting][8][]8}{[1][26][]26}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {8}Checking if the keyword for entering the program mode is received.}{26}{lstlisting.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.2}TF (Trigger Fire)}{26}{paragraph.3.4.1.2}\protected@file@percent }
+\newlabel{lst:interrupt}{{9}{26}{Interrupt function for handling the fire signal}{lstlisting.9}{}}
+\newlabel{lst:interrupt@cref}{{[lstlisting][9][]9}{[1][26][]26}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}Interrupt function for handling the fire signal.}{26}{lstlisting.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.3}DN (Done)}{26}{paragraph.3.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.1.4}WT (Wait)}{26}{paragraph.3.4.1.4}\protected@file@percent }
+\newlabel{lst:waitcounter}{{10}{26}{Definition of \textit {wait\_counter} and the threshold}{lstlisting.10}{}}
+\newlabel{lst:waitcounter@cref}{{[lstlisting][10][]10}{[1][26][]26}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {10}Definition of \textit  {wait\_counter} and the threshold.}{26}{lstlisting.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}States}{27}{subsubsection.3.4.2}\protected@file@percent }
+\newlabel{States}{{3.4.2}{27}{States}{subsubsection.3.4.2}{}}
+\newlabel{States@cref}{{[subsubsection][2][3,4]3.4.2}{[1][27][]27}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.1}\textit  {PG\_MODE}}{27}{paragraph.3.4.2.1}\protected@file@percent }
+\newlabel{lst:pgmode}{{11}{27}{Code of the \textit {PG\_MODE} state}{lstlisting.11}{}}
+\newlabel{lst:pgmode@cref}{{[lstlisting][11][]11}{[1][27][]27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {11}Code of the \textit  {PG\_MODE} state.}{27}{lstlisting.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.2}\textit  {INIT}}{27}{paragraph.3.4.2.2}\protected@file@percent }
+\newlabel{lst:init}{{12}{27}{Code of the \textit {INIT} state}{lstlisting.12}{}}
+\newlabel{lst:init@cref}{{[lstlisting][12][]12}{[1][27][]27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {12}Code of the \textit  {INIT} state.}{27}{lstlisting.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.3}\textit  {NO\_TRIGGER}}{27}{paragraph.3.4.2.3}\protected@file@percent }
+\newlabel{lst:notrigger}{{13}{27}{Code of the \textit {NO\_TRIGGER} state}{lstlisting.13}{}}
+\newlabel{lst:notrigger@cref}{{[lstlisting][13][]13}{[1][27][]27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {13}Code of the \textit  {NO\_TRIGGER} state.}{27}{lstlisting.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.4}\textit  {IDLE}}{28}{paragraph.3.4.2.4}\protected@file@percent }
+\newlabel{lst:idle}{{14}{28}{Code of the \textit {IDLE} state}{lstlisting.14}{}}
+\newlabel{lst:idle@cref}{{[lstlisting][14][]14}{[1][28][]28}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {14}Code of the \textit  {IDLE} state.}{28}{lstlisting.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.5}\textit  {ARMED}}{28}{paragraph.3.4.2.5}\protected@file@percent }
+\newlabel{lst:armed}{{15}{28}{Code of the \textit {ARMED} state}{lstlisting.15}{}}
+\newlabel{lst:armed@cref}{{[lstlisting][15][]15}{[1][28][]28}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {15}Code of the \textit  {ARMED} state.}{28}{lstlisting.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.6}\textit  {WAIT}}{28}{paragraph.3.4.2.6}\protected@file@percent }
+\newlabel{lst:wait}{{16}{28}{Code of the \textit {WAIT} state}{lstlisting.16}{}}
+\newlabel{lst:wait@cref}{{[lstlisting][16][]16}{[1][28][]28}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {16}Code of the \textit  {WAIT} state.}{28}{lstlisting.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.7}\textit  {FIRE}}{29}{paragraph.3.4.2.7}\protected@file@percent }
+\newlabel{lst:fire}{{17}{29}{Code of the \textit {FIRE} state}{lstlisting.17}{}}
+\newlabel{lst:fire@cref}{{[lstlisting][17][]17}{[1][29][]29}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {17}Code of the \textit  {FIRE} state.}{29}{lstlisting.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.4.2.8}\textit  {END}}{29}{paragraph.3.4.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Program Mode}{30}{subsection.3.5}\protected@file@percent }
+\newlabel{Program Mode}{{3.5}{30}{Program Mode}{subsection.3.5}{}}
+\newlabel{Program Mode@cref}{{[subsection][5][3]3.5}{[1][30][]30}}
+\newlabel{lst:serialread}{{18}{30}{Reading data from serial}{lstlisting.18}{}}
+\newlabel{lst:serialread@cref}{{[lstlisting][18][]18}{[1][30][]30}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {18}Reading data from serial.}{30}{lstlisting.18}\protected@file@percent }
+\newlabel{lst:serialbreak}{{19}{30}{Break down the command in its parts}{lstlisting.19}{}}
+\newlabel{lst:serialbreak@cref}{{[lstlisting][19][]19}{[1][30][]30}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {19}Break down the command in its parts.}{30}{lstlisting.19}\protected@file@percent }
+\newlabel{lst:serialinterpret}{{20}{30}{Checking if the received command is the \textit {list} command}{lstlisting.20}{}}
+\newlabel{lst:serialinterpret@cref}{{[lstlisting][20][]20}{[1][30][]30}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {20}Checking if the received command is the \textit  {list} command.}{30}{lstlisting.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}\textit  {list}}{31}{subsubsection.3.5.1}\protected@file@percent }
+\newlabel{lst:cmdlist}{{21}{31}{Implementation of the \textit {list} command}{lstlisting.21}{}}
+\newlabel{lst:cmdlist@cref}{{[lstlisting][21][]21}{[1][31][]31}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {21}Implementation of the \textit  {list} command.}{31}{lstlisting.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}\textit  {set}}{31}{subsubsection.3.5.2}\protected@file@percent }
+\newlabel{lst:cmdset}{{22}{31}{Implementation of the \textit {set} command}{lstlisting.22}{}}
+\newlabel{lst:cmdset@cref}{{[lstlisting][22][]22}{[1][31][]31}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {22}Implementation of the \textit  {set} command.}{31}{lstlisting.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}\textit  {stop}}{32}{subsubsection.3.5.3}\protected@file@percent }
+\newlabel{lst:cmdstop}{{23}{32}{Implementation of the \textit {stop} command}{lstlisting.23}{}}
+\newlabel{lst:cmdstop@cref}{{[lstlisting][23][]23}{[1][32][]32}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {23}Implementation of the \textit  {stop} command.}{32}{lstlisting.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}Instruction Set}{32}{subsubsection.3.5.4}\protected@file@percent }
+\newlabel{Instruction Set}{{3.5.4}{32}{Instruction Set}{subsubsection.3.5.4}{}}
+\newlabel{Instruction Set@cref}{{[subsubsection][4][3,5]3.5.4}{[1][32][]32}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces List of all commands}}{32}{table.5}\protected@file@percent }
+\newlabel{tab:instruction_set}{{5}{32}{List of all commands}{table.5}{}}
+\newlabel{tab:instruction_set@cref}{{[table][5][]5}{[1][32][]32}}
 \@setckpt{./zk_48_firmware}{
-\setcounter{page}{21}
+\setcounter{page}{33}
 \setcounter{equation}{4}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{16}
+\setcounter{footnote}{17}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{section}{3}
-\setcounter{subsection}{0}
-\setcounter{subsubsection}{1}
+\setcounter{subsection}{5}
+\setcounter{subsubsection}{4}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{26}
-\setcounter{table}{0}
+\setcounter{figure}{28}
+\setcounter{table}{5}
 \setcounter{section@level}{3}
 \setcounter{Item}{12}
-\setcounter{Hfootnote}{16}
-\setcounter{bookmark@seq@number}{34}
+\setcounter{Hfootnote}{17}
+\setcounter{bookmark@seq@number}{36}
 \setcounter{parentequation}{0}
-\setcounter{lstnumber}{1}
+\setcounter{lstnumber}{5}
 \setcounter{float@type}{8}
-\setcounter{lstlisting}{0}
+\setcounter{lstlisting}{23}
 }
