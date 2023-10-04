@@ -32,7 +32,7 @@ As explained in \cref{Concept}, the device can be divided into four parts. This 
 
 \noindent Through a voltage divider the voltage at $C2$ is stepped down by a factor of $\frac{1}{9}$ and compared to a $2,5V$ reference voltage by $U3A$. This results in a $5V$ output signal at the output of $U3A$, if the capacitors $C2$ voltage is lower than $22,5V$. This signal is called the feedback signal and is used to turn off the NE555, if the intermediate voltage has reached $22,5V$. Using a schmitt-trigger results in a oscillating feedback signal, which is undesirable in this configuration. If the intermediate voltage reaches $22,5V$, the feedback signal will no longer be $5V$ or $0V$, instead it will drop to a constant $2,5V$. This is expected as no schmitt-trigger is used, but will result in unpredictable behaviour by the NE555, as it expects a binary reset signal. This seems like a problem, but in reality will result in the NE555 output voltage to drop below the on-voltage of the IRF730, thus turning it off. It is also observable that the frequency and on-time of the NE555 output is rising, but this has no effect, because the voltage already dropped significantly to turn off the MOSFET. \\
 
-\noindent The intermediate voltage is then converted by the L7815 to stable $15V$, which charges the large $20mF$ ignition capacitor $C3$. This voltage is called the ignition voltage. \Cref{eq:power_in_system} calculates the total energy stored in the system with all six modules connected (Thus the total capacitance being $26mF$, but read more in \Cref{Ignition Module work} "Additional circuits") which equates to around $3J$ and therefore does not pose any  danger to life\footurl{https://www.ehss.vt.edu/programs/ELR_capacitors.php}. Touching the fully charged capacitors with wet hands (which is highly advised against doing!) did not result in any shock or pain.\\
+\noindent The intermediate voltage is then converted by the L7815 to stable $15V$, which charges the large $20mF$ ignition capacitor $C3$. This voltage is called the ignition voltage. \cref{eq:power_in_system} calculates the total energy stored in the system with all six modules connected (Thus the total capacitance being $26mF$, but read more in \cref{Ignition Module work} "Additional circuits") which equates to around $3J$ and therefore does not pose any  danger to life\footurl{https://www.ehss.vt.edu/programs/ELR_capacitors.php}. Touching the fully charged capacitors with wet hands (which is highly advised against doing!) did not result in any shock or pain.\\
 
 \begin{equation}
 W_{el}=\frac{U^2 \cdot C_{tot}}{2}=\frac{(15V)^2 \cdot 26mF}{2}=2,925J
@@ -403,7 +403,7 @@ To reduce the large ignition currents through the cable which could cause interf
     \label{fig:raw_modules}     
 \end{figure}
 
-\noindent To connect the bridge wire detonators to the circuit, speaker terminals were used.  In \Cref{fig:mod_closed} the bottom two terminal rows represent the eight ports and the top row are all $15V$. This design is less ideal, because for two ports there is only one $15V$ terminal hole, but due limited space on top the housing this was a necessary compromise.  \\
+\noindent To connect the bridge wire detonators to the circuit, speaker terminals were used.  In \cref{fig:mod_closed} the bottom two terminal rows represent the eight ports and the top row are all $15V$. This design is less ideal, because for two ports there is only one $15V$ terminal hole, but due limited space on top the housing this was a necessary compromise.  \\
 
 \begin{figure}[!ht]
     \centering

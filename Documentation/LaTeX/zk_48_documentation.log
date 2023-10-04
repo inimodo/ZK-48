@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.21)  21 SEP 2023 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.21)  4 OCT 2023 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,7 +633,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 7.
-<./Figures/zk_48_logo.png, id=167, 480.79625pt x 740.7675pt>
+<./Figures/zk_48_logo.png, id=163, 480.79625pt x 740.7675pt>
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 12.
@@ -670,7 +670,7 @@ l.31
 \openout2 = `./zk_48_introduction.aux'.
 
  (zk_48_introduction.tex
-<./Figures/complete_with_trig_and_mod.JPG, id=228, 1703.5645pt x 1037.476pt>
+<./Figures/complete_with_trig_and_mod.JPG, id=223, 1703.5645pt x 1037.476pt>
 File: ./Figures/complete_with_trig_and_mod.JPG Graphic file (type jpg)
 <use ./Figures/complete_with_trig_and_mod.JPG>
 Package pdftex.def Info: ./Figures/complete_with_trig_and_mod.JPG  used on inpu
@@ -700,7 +700,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.18 \subsection
                 {Concept} <./Figures/complete_with_trig_and_mod.JPG>]
-<./Figures/concept_all.png, id=243, 442.65375pt x 221.82875pt>
+<./Figures/concept_all.png, id=238, 442.65375pt x 221.82875pt>
 File: ./Figures/concept_all.png Graphic file (type png)
 <use ./Figures/concept_all.png>
 Package pdftex.def Info: ./Figures/concept_all.png  used on input line 25.
@@ -730,12 +730,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-<./Figures/concept_ivg.png, id=253, 442.65375pt x 222.8325pt>
+<./Figures/concept_ivg.png, id=248, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_ivg.png Graphic file (type png)
 <use ./Figures/concept_ivg.png>
 Package pdftex.def Info: ./Figures/concept_ivg.png  used on input line 12.
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/ivg_circuit.png, id=257, 2263.45625pt x 1527.7075pt>
+<./Figures/ivg_circuit.png, id=252, 2263.45625pt x 1527.7075pt>
 File: ./Figures/ivg_circuit.png Graphic file (type png)
 <use ./Figures/ivg_circuit.png>
 Package pdftex.def Info: ./Figures/ivg_circuit.png  used on input line 22.
@@ -784,7 +784,7 @@ File: ./Figures/zk_48_logo.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 46.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
 [5]
-<./Figures/testrig_pulse.png, id=296, 1049.9225pt x 722.7pt>
+<./Figures/testrig_pulse.png, id=291, 1049.9225pt x 722.7pt>
 File: ./Figures/testrig_pulse.png Graphic file (type png)
 <use ./Figures/testrig_pulse.png>
 Package pdftex.def Info: ./Figures/testrig_pulse.png  used on input line 53.
@@ -794,7 +794,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-<./Figures/eight_pulses_close.png, id=301, 803.0pt x 481.8pt>
+<./Figures/eight_pulses_close.png, id=296, 803.0pt x 481.8pt>
 File: ./Figures/eight_pulses_close.png Graphic file (type png)
 <use ./Figures/eight_pulses_close.png>
 Package pdftex.def Info: ./Figures/eight_pulses_close.png  used on input line 6
@@ -822,13 +822,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-<./Figures/eight_pulses_wide.png, id=315, 803.0pt x 481.8pt>
+<./Figures/eight_pulses_wide.png, id=310, 803.0pt x 481.8pt>
 File: ./Figures/eight_pulses_wide.png Graphic file (type png)
 <use ./Figures/eight_pulses_wide.png>
 Package pdftex.def Info: ./Figures/eight_pulses_wide.png  used on input line 78
 .
 (pdftex.def)             Requested size: 284.52756pt x 170.7204pt.
-<./Figures/max_pulses.png, id=316, 803.0pt x 481.8pt>
+<./Figures/max_pulses.png, id=311, 803.0pt x 481.8pt>
 File: ./Figures/max_pulses.png Graphic file (type png)
 <use ./Figures/max_pulses.png>
 Package pdftex.def Info: ./Figures/max_pulses.png  used on input line 87.
@@ -851,13 +851,13 @@ s been already used, duplicate ignored
 l.99 
       <./Figures/eight_pulses_wide.png (PNG copy)> <./Figures/max_pulses.png (P
 NG copy)>]
-<./Figures/concept_controller.png, id=325, 442.65375pt x 222.8325pt>
+<./Figures/concept_controller.png, id=320, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_controller.png Graphic file (type png)
 <use ./Figures/concept_controller.png>
 Package pdftex.def Info: ./Figures/concept_controller.png  used on input line 1
 06.
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/controller_circuit.png, id=327, 3306.3525pt x 2274.4975pt>
+<./Figures/controller_circuit.png, id=322, 3306.3525pt x 2274.4975pt>
 File: ./Figures/controller_circuit.png Graphic file (type png)
 <use ./Figures/controller_circuit.png>
 Package pdftex.def Info: ./Figures/controller_circuit.png  used on input line 1
@@ -893,7 +893,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-<./Figures/uart_ttl.jpg, id=347, 1374.13374pt x 1195.46625pt>
+<./Figures/uart_ttl.jpg, id=342, 1374.13374pt x 1195.46625pt>
 File: ./Figures/uart_ttl.jpg Graphic file (type jpg)
 <use ./Figures/uart_ttl.jpg>
 Package pdftex.def Info: ./Figures/uart_ttl.jpg  used on input line 143.
@@ -930,7 +930,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-<./Figures/mod_trig_connector.png, id=370, 953.5625pt x 260.975pt>
+<./Figures/mod_trig_connector.png, id=365, 953.5625pt x 260.975pt>
 File: ./Figures/mod_trig_connector.png Graphic file (type png)
 <use ./Figures/mod_trig_connector.png>
 Package pdftex.def Info: ./Figures/mod_trig_connector.png  used on input line 1
@@ -941,12 +941,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-<./Figures/MAB_5.jpg, id=377, 301.125pt x 301.125pt>
+<./Figures/MAB_5.jpg, id=372, 301.125pt x 301.125pt>
 File: ./Figures/MAB_5.jpg Graphic file (type jpg)
 <use ./Figures/MAB_5.jpg>
 Package pdftex.def Info: ./Figures/MAB_5.jpg  used on input line 179.
 (pdftex.def)             Requested size: 85.35826pt x 85.35744pt.
-<./Figures/MAS_50.jpg, id=378, 301.125pt x 301.125pt>
+<./Figures/MAS_50.jpg, id=373, 301.125pt x 301.125pt>
 File: ./Figures/MAS_50.jpg Graphic file (type jpg)
 <use ./Figures/MAS_50.jpg>
 Package pdftex.def Info: ./Figures/MAS_50.jpg  used on input line 181.
@@ -978,13 +978,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
-<./Figures/dev_controller.jpeg, id=396, 1606.0pt x 1204.5pt>
+<./Figures/dev_controller.jpeg, id=391, 1606.0pt x 1204.5pt>
 File: ./Figures/dev_controller.jpeg Graphic file (type jpg)
 <use ./Figures/dev_controller.jpeg>
 Package pdftex.def Info: ./Figures/dev_controller.jpeg  used on input line 198.
 
 (pdftex.def)             Requested size: 284.52756pt x 213.38211pt.
-<./Figures/controller_circuit_soldered.JPG, id=397, 1114.9655pt x 908.996pt>
+<./Figures/controller_circuit_soldered.JPG, id=392, 1114.9655pt x 908.996pt>
 File: ./Figures/controller_circuit_soldered.JPG Graphic file (type jpg)
 <use ./Figures/controller_circuit_soldered.JPG>
 Package pdftex.def Info: ./Figures/controller_circuit_soldered.JPG  used on inp
@@ -1012,13 +1012,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-<./Figures/controller_plate_top.JPG, id=409, 1264.725pt x 957.176pt>
+<./Figures/controller_plate_top.JPG, id=404, 1264.725pt x 957.176pt>
 File: ./Figures/controller_plate_top.JPG Graphic file (type jpg)
 <use ./Figures/controller_plate_top.JPG>
 Package pdftex.def Info: ./Figures/controller_plate_top.JPG  used on input line
  221.
 (pdftex.def)             Requested size: 284.52756pt x 215.3261pt.
-<./Figures/controller_plate_side.JPG, id=415, 1546.9795pt x 642.4pt>
+<./Figures/controller_plate_side.JPG, id=410, 1546.9795pt x 642.4pt>
 File: ./Figures/controller_plate_side.JPG Graphic file (type jpg)
 <use ./Figures/controller_plate_side.JPG>
 Package pdftex.def Info: ./Figures/controller_plate_side.JPG  used on input lin
@@ -1042,7 +1042,7 @@ as been already used, duplicate ignored
 l.236 
        <./Figures/controller_plate_top.JPG> <./Figures/controller_plate_side.JP
 G>]
-<./Figures/gn_case.jpg, id=426, 1218.5525pt x 1404.24625pt>
+<./Figures/gn_case.jpg, id=421, 1218.5525pt x 1404.24625pt>
 File: ./Figures/gn_case.jpg Graphic file (type jpg)
 <use ./Figures/gn_case.jpg>
 Package pdftex.def Info: ./Figures/gn_case.jpg  used on input line 239.
@@ -1052,7 +1052,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
-<./Figures/controller_open_legend.png, id=434, 1171.1755pt x 949.5475pt>
+<./Figures/controller_open_legend.png, id=429, 1171.1755pt x 949.5475pt>
 File: ./Figures/controller_open_legend.png Graphic file (type png)
 <use ./Figures/controller_open_legend.png>
 Package pdftex.def Info: ./Figures/controller_open_legend.png  used on input li
@@ -1075,13 +1075,13 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.269 
        <./Figures/gn_case.jpg> <./Figures/controller_open_legend.png>]
-<./Figures/concept_trigger.png, id=451, 442.65375pt x 222.8325pt>
+<./Figures/concept_trigger.png, id=446, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_trigger.png Graphic file (type png)
 <use ./Figures/concept_trigger.png>
 Package pdftex.def Info: ./Figures/concept_trigger.png  used on input line 274.
 
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/trigger_circuit.png, id=452, 2263.45625pt x 1527.7075pt>
+<./Figures/trigger_circuit.png, id=447, 2263.45625pt x 1527.7075pt>
 File: ./Figures/trigger_circuit.png Graphic file (type png)
 <use ./Figures/trigger_circuit.png>
 Package pdftex.def Info: ./Figures/trigger_circuit.png  used on input line 283.
@@ -1098,12 +1098,12 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.289 
        <./Figures/concept_trigger.png> <./Figures/trigger_circuit.png>]
-<./Figures/trig_open.JPG, id=462, 1330.9725pt x 748.7975pt>
+<./Figures/trig_open.JPG, id=457, 1330.9725pt x 748.7975pt>
 File: ./Figures/trig_open.JPG Graphic file (type jpg)
 <use ./Figures/trig_open.JPG>
 Package pdftex.def Info: ./Figures/trig_open.JPG  used on input line 298.
 (pdftex.def)             Requested size: 284.52756pt x 160.06284pt.
-<./Figures/trig_with_cable_legend.png, id=467, 1626.878pt x 915.42pt>
+<./Figures/trig_with_cable_legend.png, id=462, 1626.878pt x 915.42pt>
 File: ./Figures/trig_with_cable_legend.png Graphic file (type png)
 <use ./Figures/trig_with_cable_legend.png>
 Package pdftex.def Info: ./Figures/trig_with_cable_legend.png  used on input li
@@ -1127,13 +1127,13 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.319 
        <./Figures/trig_open.JPG> <./Figures/trig_with_cable_legend.png>]
-<./Figures/concept_modules.png, id=477, 442.65375pt x 222.8325pt>
+<./Figures/concept_modules.png, id=472, 442.65375pt x 222.8325pt>
 File: ./Figures/concept_modules.png Graphic file (type png)
 <use ./Figures/concept_modules.png>
 Package pdftex.def Info: ./Figures/concept_modules.png  used on input line 325.
 
 (pdftex.def)             Requested size: 142.26378pt x 71.61726pt.
-<./Figures/module_circuit.png, id=478, 3306.3525pt x 2274.4975pt>
+<./Figures/module_circuit.png, id=473, 3306.3525pt x 2274.4975pt>
 File: ./Figures/module_circuit.png Graphic file (type png)
 <use ./Figures/module_circuit.png>
 Package pdftex.def Info: ./Figures/module_circuit.png  used on input line 334.
@@ -1154,7 +1154,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
-<./Figures/module_ignitor.png, id=486, 670.505pt x 401.5pt>
+<./Figures/module_ignitor.png, id=481, 670.505pt x 401.5pt>
 File: ./Figures/module_ignitor.png Graphic file (type png)
 <use ./Figures/module_ignitor.png>
 Package pdftex.def Info: ./Figures/module_ignitor.png  used on input line 349.
@@ -1190,7 +1190,7 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.375 
        <./Figures/module_ignitor.png>]
-<./Figures/75hc595_functional.png, id=510, 503.63156pt x 397.485pt>
+<./Figures/75hc595_functional.png, id=505, 503.63156pt x 397.485pt>
 File: ./Figures/75hc595_functional.png Graphic file (type png)
 <use ./Figures/75hc595_functional.png>
 Package pdftex.def Info: ./Figures/75hc595_functional.png  used on input line 3
@@ -1222,7 +1222,7 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.394 
        <./Figures/75hc595_functional.png>]
-<./Figures/raw_modules.jpeg, id=533, 1203.7472pt x 902.6222pt>
+<./Figures/raw_modules.jpeg, id=528, 1203.7472pt x 902.6222pt>
 File: ./Figures/raw_modules.jpeg Graphic file (type jpg)
 <use ./Figures/raw_modules.jpeg>
 Package pdftex.def Info: ./Figures/raw_modules.jpeg  used on input line 401.
@@ -1237,12 +1237,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
-<./Figures/mod_closed.JPG, id=534, 1271.5505pt x 715.473pt>
+<./Figures/mod_closed.JPG, id=529, 1271.5505pt x 715.473pt>
 File: ./Figures/mod_closed.JPG Graphic file (type jpg)
 <use ./Figures/mod_closed.JPG>
 Package pdftex.def Info: ./Figures/mod_closed.JPG  used on input line 410.
 (pdftex.def)             Requested size: 199.16928pt x 112.0653pt.
-<./Figures/mod_open.JPG, id=535, 1260.71pt x 709.4505pt>
+<./Figures/mod_open.JPG, id=530, 1260.71pt x 709.4505pt>
 File: ./Figures/mod_open.JPG Graphic file (type jpg)
 <use ./Figures/mod_open.JPG>
 Package pdftex.def Info: ./Figures/mod_open.JPG  used on input line 411.
@@ -1269,7 +1269,7 @@ _closed.JPG> <./Figures/mod_open.JPG>]
 \openout2 = `./zk_48_firmware.aux'.
 
  (zk_48_firmware.tex
-<./Figures/attiny861_pinout.jpg, id=545, 1055.945pt x 328.72812pt>
+<./Figures/attiny861_pinout.jpg, id=540, 1055.945pt x 328.72812pt>
 File: ./Figures/attiny861_pinout.jpg Graphic file (type jpg)
 <use ./Figures/attiny861_pinout.jpg>
 Package pdftex.def Info: ./Figures/attiny861_pinout.jpg  used on input line 9.
@@ -1344,7 +1344,7 @@ File: ./Figures/zk_48_logo.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 81.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
 [22]
-<./Figures/75hc595_timing.png, id=652, 627.84563pt x 525.46312pt>
+<./Figures/75hc595_timing.png, id=647, 627.84563pt x 525.46312pt>
 File: ./Figures/75hc595_timing.png Graphic file (type png)
 <use ./Figures/75hc595_timing.png>
 Package pdftex.def Info: ./Figures/75hc595_timing.png  used on input line 86.
@@ -1371,7 +1371,7 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.100 
        <./Figures/75hc595_timing.png>]
-<./Figures/fsm.png, id=686, 564.1075pt x 564.1075pt>
+<./Figures/fsm.png, id=681, 564.1075pt x 564.1075pt>
 File: ./Figures/fsm.png Graphic file (type png)
 <use ./Figures/fsm.png>
 Package pdftex.def Info: ./Figures/fsm.png  used on input line 106.
@@ -1446,26 +1446,19 @@ File: ./Figures/zk_48_logo.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 254.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
  [27]
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
-
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino
+Overfull \hbox (50.17683pt too wide) in paragraph at lines 364--366
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][] 
  []
 
-(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-
- []
-
-(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
-(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
+) (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 272.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
  [28]
-
-LaTeX Warning: Reference `lt:fire' on page 1 undefined on input line 274.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
@@ -1504,27 +1497,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-(../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-
- []
-
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 307.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 303.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
 [30] (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
-
- []
-
 (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino)
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 320.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 316.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
  [31]
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
@@ -1547,9 +1531,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 43.
+Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 47.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
 [33
 
@@ -1560,7 +1549,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.43 
+l.47 
      ] (../../Firmware/ZK_48_Firmware/ZK_48_Firmware.ino
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
@@ -1588,38 +1577,33 @@ File: ./Figures/zk_48_logo.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 305.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
  [38]
+Overfull \hbox (50.17683pt too wide) in paragraph at lines 364--366
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][] 
+ []
+
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 366.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
- [39]
-File: ./Figures/zk_48_logo.png Graphic file (type png)
-<use ./Figures/zk_48_logo.png>
-Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 427.
-(pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
- [40])
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-)
+[39]))
 File: ./Figures/zk_48_logo.png Graphic file (type png)
 <use ./Figures/zk_48_logo.png>
 Package pdftex.def Info: ./Figures/zk_48_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 19.22856pt x 29.62564pt.
- [41] (zk_48_documentation.aux (zk_48_introduction.aux) (zk_48_hardware.aux)
-(zk_48_firmware.aux) (zk_48_appendix.aux))
+ [40] (zk_48_documentation.aux (zk_48_introduction.aux)
+(zk_48_hardware.aux) (zk_48_firmware.aux) (zk_48_appendix.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `zk_48_documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 50808752D7ACA6D552078D5B74F09449;5531.
+(rerunfilecheck)             Checksum: E04BFA7D59095719660C07D97E6B0B33;5423.
  ) 
 Here is how much of TeX's memory you used:
- 21625 strings out of 476331
- 414678 string characters out of 5786821
+ 21630 strings out of 476331
+ 414631 string characters out of 5786821
  1928660 words of memory out of 5000000
- 40835 multiletter control sequences out of 15000+600000
+ 40831 multiletter control sequences out of 15000+600000
  530446 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,15n,79p,1258b,2444s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1647,9 +1631,9 @@ rs/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
 fb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmr7.pfb><C:/Users/inimodo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb>
-Output written on zk_48_documentation.pdf (42 pages, 26592361 bytes).
+Output written on zk_48_documentation.pdf (41 pages, 26590697 bytes).
 PDF statistics:
- 2278 PDF objects out of 2487 (max. 8388607)
- 851 named destinations out of 1000 (max. 500000)
- 504 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2279 PDF objects out of 2487 (max. 8388607)
+ 862 named destinations out of 1000 (max. 500000)
+ 496 words of extra memory for PDF output out of 10000 (max. 10000000)
 

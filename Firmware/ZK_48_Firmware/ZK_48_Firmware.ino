@@ -94,12 +94,8 @@ byte wait_counter;
 
 byte state = STATE_INIT;
 
-// ################# // Setup // ################# //
-
 void setup() 
-{ //
-
-  // this is not my code!
+{ 
   // source: https://community.platformio.org/t/
   //         attiny-8mhz-wrong-timing-in-delay-fastled-and-neopixel/24992/3
   // start
@@ -133,12 +129,12 @@ void setup()
     
 }
 
-// ################# // EEPROM Functions // ################# //
 
 void writeProgramEndpoint(byte endpoint)
 {
   EEPROM.write(0,endpoint);
 }
+
 
 byte readProgramEndpoint()
 {
@@ -149,8 +145,8 @@ void writeProgramPoint(byte index,section pg_point)
 {
   short real_address = index*sizeof(section) + sizeof(byte);
   EEPROM.put(real_address,pg_point);
-  
 }
+
 
 section readProgramPoint(byte index)
 {
@@ -160,9 +156,7 @@ section readProgramPoint(byte index)
   return pg_point;
 }
 
-// ################# // Program Mode // ################# //
 
-// checks if program mode must be entered
 char checkPGM()
 {
   if (Serial.available() > 0) 
@@ -177,7 +171,7 @@ char checkPGM()
   return false;
 }
 
-// programs the internal EEPROM via serial commands
+
 byte programmMode()
 {
   if (Serial.available() > 0) 
@@ -255,12 +249,9 @@ byte programmMode()
   }
 }
 
-// ################# // IO Functions // ################# //
 
-// sets the port on ALL modules
-void transmitData(byte port) //
+void transmitData(byte port) 
 {
-  
   for(byte port_index = 0; port_index < 9; port_index ++ )
   {
     if(port_index == port)
@@ -277,8 +268,8 @@ void transmitData(byte port) //
   }
 }
 
-// selects what module is meant to ignite the set Port
-void setModule(byte module) //
+
+void setModule(byte module) 
 {
   digitalWrite(TRIGADD_A0,module_resolve[module][nA0]);
   digitalWrite(TRIGADD_A1,module_resolve[module][nA1]);
@@ -286,8 +277,8 @@ void setModule(byte module) //
   digitalWrite(TRIGADD_2E,module_resolve[module][E2]);
 }
 
-// ignites a port on a given module
-void ignite(byte module, byte port) //
+
+void ignite(byte module, byte port) 
 {
   transmitData(port);
   setModule(module+1); // +1 because 0 (ALL_OFF) is turning off all modules
@@ -298,7 +289,7 @@ void ignite(byte module, byte port) //
   transmitData(CLEAR_REG); // clear registers for safety reasons
 }
 
-// sets status led
+
 void setLEDState(byte G,byte R,byte P)
 {
   digitalWrite(STATUS_RED,R);
@@ -306,9 +297,7 @@ void setLEDState(byte G,byte R,byte P)
   digitalWrite(STATUS_PIEP,P);
 }
 
-// ################# // State Machine // ################# //
 
-// does what the name implies 
 byte FSM(byte state)
 {
   byte PG = checkPGM();
@@ -352,13 +341,14 @@ byte FSM(byte state)
       setLEDState(HIGH,LOW,LOW);
       delay(250);
       setLEDState(LOW,HIGH,LOW); 
-      delay(250);      
+      delay(250); 
+           
       break;
       
     case STATE_IDLE:
       if(PG == 1)new_state = STATE_PG_MODE;
       else if(TC == 0) new_state = STATE_NO_TRIGGER;
-      else if(CA == 1 && TA == 1) new_state = STATE_ARMED;
+      else if(CA == 1 && TA == 1 && TC == 1) new_state = STATE_ARMED;
 
       wait_counter = 0;
       
@@ -366,12 +356,12 @@ byte FSM(byte state)
       delay(100);
       setLEDState(LOW,LOW,LOW);
       delay(500);
+      
       break;
       
     case STATE_ARMED:          
-      if(TA == 0)new_state = STATE_IDLE;
-      else if(CA == 0)new_state = STATE_IDLE;
-      if(TF == 1)new_state = STATE_WAIT;
+      if(TA == 0 || CA == 0)new_state = STATE_IDLE;
+      else if(TF == 1 && TA == 1 && CA == 1 && TC == 1 && WT == 1)new_state = STATE_WAIT;
       
       fire_pulse_counter = 0;
       
@@ -379,12 +369,12 @@ byte FSM(byte state)
       delay(100);
       setLEDState(LOW,LOW,LOW);
       delay(500); 
+      
       break;
       
     case STATE_WAIT:
-      if(TA == 0)new_state = STATE_IDLE;
-      else if(TA == 0)new_state = STATE_IDLE;
-      else if (WT == 0) new_state = STATE_FIRE;
+      if(TA == 0 || CA == 0)new_state = STATE_IDLE;
+      else if (WT == 0 && TA == 1 && CA == 1 && TC == 1) new_state = STATE_FIRE;
 
       wait_counter++;
       
@@ -392,11 +382,11 @@ byte FSM(byte state)
       delay(50);
       setLEDState(LOW,LOW,LOW);
       delay(50);
+      
       break;
       
     case STATE_FIRE:
-      if(TA == 0)new_state = STATE_IDLE;
-      else if(TA == 0)new_state = STATE_IDLE;
+      if(TA == 0 || CA == 0)new_state = STATE_IDLE;
       else if(DN == 1) new_state = STATE_END;
       
       section pgpoint = readProgramPoint(pg_index);
@@ -407,17 +397,16 @@ byte FSM(byte state)
       ignite(pgpoint.module,pgpoint.port); 
       
       pg_index++;  
+      
       break;
   
     case STATE_END:
       setLEDState(LOW,HIGH,LOW);
-      break;
-      
+      break;     
   }
   return new_state;
 }
 
-// ################# // Main Loop // ################# //
 
 void loop() 
 {

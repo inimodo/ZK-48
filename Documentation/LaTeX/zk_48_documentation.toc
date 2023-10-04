@@ -59,6 +59,5 @@
 \contentsline {subsubsection}{\numberline {3.5.4}Instruction Set}{32}{subsubsection.3.5.4}%
 \contentsline {section}{\numberline {4}Appendix}{33}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Pricing}{33}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Conclusion}{33}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Recognitions}{33}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Firmware Code}{34}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Recognitions}{41}{subsection.4.4}%
