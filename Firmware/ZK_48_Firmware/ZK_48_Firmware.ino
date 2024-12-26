@@ -77,7 +77,7 @@ byte wait_counter;
 
 
 // time each ignition pulse takes - depends on e-igniter
-#define IGNITION_TIME 10 // ms
+#define IGNITION_TIME 30 // ms
 // clock speed of transmitData() !! do not change !!
 #define TRANSMISSION_SPEED 5 //us
 
